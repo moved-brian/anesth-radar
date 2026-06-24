@@ -1,18 +1,20 @@
 """
 Scraper: 台灣疼痛醫學會 (PAIN)
 URL: https://pain.org.tw/index.php/news_page/news_page2_content
-Note: SSL cert has missing Subject Key Identifier — use verify=False
+Structure: HTML table with columns: ID | 類型 | 活動日期 | 標題
+Note: NO individual event pages — each row IS the full listing.
+      URL points to the listing page itself.
+      SSL cert broken: use verify=False
 """
 
+import re
 import logging
 import requests
 import urllib3
 from bs4 import BeautifulSoup
-
 from .base import parse_date, make_event, HEADERS
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 log      = logging.getLogger(__name__)
 BASE_URL = "https://pain.org.tw"
 LIST_URL = f"{BASE_URL}/index.php/news_page/news_page2_content"
@@ -32,7 +34,7 @@ def _get_soup(url):
                 continue
         return BeautifulSoup(r.text, "lxml")
     except Exception as e:
-        log.error("PAIN fetch %s failed: %s", url, e)
+        log.error("PAIN fetch failed: %s", e)
         return None
 
 
@@ -43,47 +45,31 @@ def scrape() -> list[dict]:
         return []
 
     events = []
-
-    # Strategy 1: HTML table (original approach)
     table = soup.find("table")
-    if table:
-        for row in table.select("tr"):
-            cols = row.select("td")
-            if len(cols) < 4:
-                continue
-            category = cols[1].get_text(strip=True) or "學術活動"
-            date_raw = cols[2].get_text(strip=True)
-            title_td = cols[3]
-            date_str = parse_date(date_raw)
-            title    = title_td.get_text(strip=True)
-            if not title:
-                continue
-            a   = title_td.find("a")
-            url = (BASE_URL + a["href"] if a and a.get("href") and not a["href"].startswith("http")
-                   else (a["href"] if a and a.get("href") else LIST_URL))
-            events.append(make_event(title, date_str, SOURCE, category, url))
-        if events:
-            log.info("PAIN table: %d events", len(events))
-            return events
+    if not table:
+        log.warning("PAIN: no table found")
+        return []
 
-    # Strategy 2: list / article items
-    for item in soup.select("li, article, .item, .news-item, tr"):
-        a = item.find("a", href=True)
-        if not a:
+    for row in table.select("tr"):
+        cols = row.select("td")
+        if len(cols) < 4:
             continue
-        title    = a.get_text(strip=True)
-        href     = a["href"]
-        url      = href if href.startswith("http") else BASE_URL + href
-        date_str = parse_date(item.get_text(" "))
-        if title:
-            events.append(make_event(title, date_str, SOURCE, "學術活動", url))
 
-    # Deduplicate
-    seen, unique = set(), []
-    for e in events:
-        if e["title"] not in seen:
-            seen.add(e["title"])
-            unique.append(e)
+        # Columns: ID | 類型 | 活動日期 | 標題
+        category = cols[1].get_text(strip=True) or "學術活動"
+        date_raw = cols[2].get_text(strip=True)
+        title    = cols[3].get_text(strip=True)
+        date_str = parse_date(date_raw)
 
-    log.info("PAIN: %d events", len(unique))
-    return unique
+        if not title:
+            continue
+
+        # No individual pages — link directly to listing page
+        # Add anchor with row ID if available (col[0])
+        row_id = cols[0].get_text(strip=True)
+        url = f"{LIST_URL}#{row_id}" if row_id.isdigit() else LIST_URL
+
+        events.append(make_event(title, date_str, SOURCE, category, url))
+
+    log.info("PAIN: %d events", len(events))
+    return events
