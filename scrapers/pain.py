@@ -1,13 +1,13 @@
 """
 Scraper: 台灣疼痛醫學會 (PAIN)
 URL: https://pain.org.tw/index.php/news_page/news_page2_content
-Structure: HTML table with columns: ID | 類型 | 活動日期 | 標題
-Note: NO individual event pages — each row IS the full listing.
-      URL points to the listing page itself.
+Structure: Two tables on page — Table[0] is search form, Table[1] is course list.
+           Columns: ID | 類型 | 活動日期 | 標題 | 瀏覽
+Note: NO individual event pages exist on this site.
+      All events link back to the listing page.
       SSL cert broken: use verify=False
 """
 
-import re
 import logging
 import requests
 import urllib3
@@ -21,9 +21,10 @@ LIST_URL = f"{BASE_URL}/index.php/news_page/news_page2_content"
 SOURCE   = "疼痛醫學會"
 
 
-def _get_soup(url):
+def scrape() -> list[dict]:
+    log.info("PAIN: fetching %s", LIST_URL)
     try:
-        r = requests.get(url, headers=HEADERS, timeout=15, verify=False)
+        r = requests.get(LIST_URL, headers=HEADERS, timeout=15, verify=False)
         r.raise_for_status()
         for enc in [r.apparent_encoding, "utf-8", "big5"]:
             try:
@@ -32,42 +33,37 @@ def _get_soup(url):
                 break
             except Exception:
                 continue
-        return BeautifulSoup(r.text, "lxml")
     except Exception as e:
         log.error("PAIN fetch failed: %s", e)
-        return None
-
-
-def scrape() -> list[dict]:
-    log.info("PAIN: fetching %s", LIST_URL)
-    soup = _get_soup(LIST_URL)
-    if soup is None:
         return []
 
+    soup = BeautifulSoup(r.text, "lxml")
+
+    # Page has TWO tables: [0] = search form, [1] = course list
+    tables = soup.find_all("table")
+    if len(tables) < 2:
+        log.warning("PAIN: expected 2 tables, got %d", len(tables))
+        return []
+
+    course_table = tables[1]
     events = []
-    table = soup.find("table")
-    if not table:
-        log.warning("PAIN: no table found")
-        return []
 
-    for row in table.select("tr"):
+    for row in course_table.select("tr"):
         cols = row.select("td")
         if len(cols) < 4:
             continue
 
-        # Columns: ID | 類型 | 活動日期 | 標題
+        row_id   = cols[0].get_text(strip=True)
         category = cols[1].get_text(strip=True) or "學術活動"
         date_raw = cols[2].get_text(strip=True)
         title    = cols[3].get_text(strip=True)
         date_str = parse_date(date_raw)
 
-        if not title:
+        if not title or not row_id.isdigit():
             continue
 
-        # No individual pages — link directly to listing page
-        # Add anchor with row ID if available (col[0])
-        row_id = cols[0].get_text(strip=True)
-        url = f"{LIST_URL}#{row_id}" if row_id.isdigit() else LIST_URL
+        # No individual pages — link to listing page
+        url = LIST_URL
 
         events.append(make_event(title, date_str, SOURCE, category, url))
 
