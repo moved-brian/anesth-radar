@@ -1,0 +1,174 @@
+{
+  "generated_at": "2026-06-24T09:00:00Z",
+  "total": 20,
+  "sources": {
+    "TSA": 8,
+    "疼痛醫學會": 3,
+    "RAPM": 6,
+    "TSCVA": 1,
+    "TWERAS": 2,
+    "TSCCM": 1
+  },
+  "events": [
+    {
+      "title": "2026年 VIPS-Essentials Learning from the Master 工作坊",
+      "date": "2026-06-27",
+      "source": "疼痛醫學會",
+      "category": "疼痛/介入",
+      "url": "https://pain.org.tw/",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "疼痛擂台 6：真實病人工作坊 — 腰臀同源",
+      "date": "2026-06-28",
+      "source": "RAPM",
+      "category": "區域麻醉・疼痛介入",
+      "url": "https://rapm.org.tw/news-detail/24",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "2026年亞太 ERAS 夥伴國際專家論壇暨學會年會",
+      "date": "2026-06-28",
+      "source": "TWERAS",
+      "category": "ERAS・周術期",
+      "url": "https://tweras.org/",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "台灣麻醉醫學會 115年度第6次月會",
+      "date": "2026-07-04",
+      "source": "TSA",
+      "category": "月會",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=1234",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "TEE 進階工作坊：心臟手術周術期監測",
+      "date": "2026-07-12",
+      "source": "TSCVA",
+      "category": "心臟麻醉",
+      "url": "https://www.tscva.org.tw/",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "Vision Interventional Pain Symposium (VIPS 2026)",
+      "date": "2026-07-17",
+      "source": "疼痛醫學會",
+      "category": "疼痛/介入",
+      "url": "https://pain.org.tw/",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "特管法麻醉鎮靜課程（中區）",
+      "date": "2026-07-19",
+      "source": "TSA",
+      "category": "鎮靜課程",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=1220",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "重症超音波工作坊 POCUS for ICU",
+      "date": "2026-07-25",
+      "source": "TSCCM",
+      "category": "重症・ACLS",
+      "url": "https://www.tsccm.org.tw/",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "台灣麻醉醫學會 115年度第7次月會",
+      "date": "2026-08-01",
+      "source": "TSA",
+      "category": "月會",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=1235",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "麻醉護理繼教課程：術中監測與安全",
+      "date": "2026-08-09",
+      "source": "TSA",
+      "category": "繼教課程",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=1240",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "基因、腸腦軸、食品毒素、營養與疼痛工作坊",
+      "date": "2026-08-23",
+      "source": "RAPM",
+      "category": "區域麻醉・疼痛介入",
+      "url": "https://rapm.org.tw/news-detail/27",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "TriNetX 真實世界數據實作工作坊",
+      "date": "2026-09-12",
+      "source": "RAPM",
+      "category": "區域麻醉・疼痛介入",
+      "url": "https://rapm.org.tw/news-detail/28",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "台灣麻醉醫學會 2026 年會",
+      "date": "2026-09-26",
+      "source": "TSA",
+      "category": "年會",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=1100",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "骨科手術超音波神經阻斷工作坊",
+      "date": "2026-09-27",
+      "source": "RAPM",
+      "category": "區域麻醉・疼痛介入",
+      "url": "https://rapm.org.tw/news-detail/11",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "台灣麻醉醫學會年會工作坊：TIVA 全靜脈麻醉實務",
+      "date": "2026-09-27",
+      "source": "TSA",
+      "category": "年會工作坊",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=1250",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "台灣麻醉醫學會 115年度第9次月會",
+      "date": "2026-10-02",
+      "source": "TSA",
+      "category": "月會",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=1237",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "台灣麻醉醫學會 115年度繼續教育課程：困難氣道處理",
+      "date": "2026-10-10",
+      "source": "TSA",
+      "category": "繼教課程",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=1260",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "2026 ERAS Taiwan 年度回顧研討會",
+      "date": "2026-11-14",
+      "source": "TWERAS",
+      "category": "ERAS・周術期",
+      "url": "https://tweras.org/",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "疼痛擂台 4：真實病人工作坊 — 橫掃頸肩",
+      "date": "2027-01-30",
+      "source": "RAPM",
+      "category": "區域麻醉・疼痛介入",
+      "url": "https://rapm.org.tw/news-detail/16",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    },
+    {
+      "title": "癌性疼痛及痠痛工作坊",
+      "date": "2027-03-28",
+      "source": "RAPM",
+      "category": "區域麻醉・疼痛介入",
+      "url": "https://rapm.org.tw/news-detail/18",
+      "scraped_at": "2026-06-24T09:00:00Z"
+    }
+  ]
+}
