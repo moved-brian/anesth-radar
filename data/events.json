@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-15T07:30:10.067961Z",
-  "total": 114,
+  "generated_at": "2026-07-15T13:00:53.765539Z",
+  "total": 115,
   "sources": {
     "TSA": 75,
     "PAIN": 17,
-    "RAPM": 15,
+    "RAPM": 16,
     "TSCVA": 11,
     "TWERAS": 11,
     "TSCCM": 9
@@ -16,7 +16,7 @@
       "source": "TSA",
       "category": "鎮靜課程",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3088&EduType=4",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "失眠與疼痛之運用腦心連結找出最適合你的芳香醫學(活動延期，日期尚未確定)",
@@ -24,7 +24,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "~ 115/07/19 麻醉活動 Vision Interventional Pain Symposium (VIPS 2026)",
@@ -32,7 +32,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3066&EduType=5",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "Vision Interventional Pain Symposium (VIPS 2026)",
@@ -40,7 +40,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "115年7月北區麻醉月會 (亞東紀念醫院麻醉部/台灣麻醉醫學會)",
@@ -48,7 +48,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3096&EduType=2",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "115年7月南區麻醉月會 (成大醫院麻醉部/台灣麻醉醫學會)",
@@ -56,7 +56,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3095&EduType=2",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "骨腫瘤影像全攻略  Bone Tumor Imaging: A Comprehensive Review",
@@ -64,7 +64,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "115年7月中區麻醉月會(中國醫藥大學附設醫院麻醉部/台灣麻醉醫學會)",
@@ -72,7 +72,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3097&EduType=2",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "115年7月東區麻醉月會(花蓮慈濟醫院麻醉部/台灣麻醉醫學會)",
@@ -80,7 +80,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3099&EduType=2",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "2026 台灣呼吸道處理醫學會系列研討會 台北場",
@@ -88,7 +88,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3101&EduType=5",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "2026第三屆臺灣CBME醫學教育週「人工智慧時代的能力導向醫學教育」國際醫學教育研討會",
@@ -96,7 +96,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3098&EduType=5",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "膝踝疼痛之肌肉骨骼超音波臨床實戰課程",
@@ -104,7 +104,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "2026台灣靜脈夏季會_心血管重症之創新與新創",
@@ -112,7 +112,7 @@
       "source": "TSCCM",
       "category": "重症・ACLS",
       "url": "https://www.tsccm.org.tw/Academic/index_other.asp",
-      "scraped_at": "2026-07-15T07:30:06Z"
+      "scraped_at": "2026-07-15T13:00:49Z"
     },
     {
       "title": "115年8月份北區麻醉月會(臺北市立萬芳醫院麻醉科、臺北醫學大學附設醫院麻醉科、衛生福利部雙和醫院麻醉科/台灣麻醉醫學會)",
@@ -120,7 +120,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3100&EduType=2",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "華碩手持無線超音波MSK骨復健系列之2 + 超音波輔助之診斷與治療 (肘部與髖部)",
@@ -128,7 +128,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "115年8月份雲嘉地區聯合討論會(大林慈濟醫院麻醉部/台灣麻醉醫學會)",
@@ -136,7 +136,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3102&EduType=5",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "跨領域骨盆障礙與疼痛之評估及訓練工作坊",
@@ -144,7 +144,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "2026 台灣疼痛醫學會 全人整合醫學教育 系列工作坊  「基因、腸腦軸、食品毒素、營養與疼痛」",
@@ -152,7 +152,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "實體會議-115年8月份南區麻醉月會 (奇美醫療財團法人奇美醫院 麻醉部 / 台灣麻醉醫學會/台灣疼痛醫學會)",
@@ -160,7 +160,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3103&EduType=2",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "兒童手持超音波教學工作坊",
@@ -168,7 +168,7 @@
       "source": "TSCCM",
       "category": "重症・ACLS",
       "url": "https://www.tsccm.org.tw/Academic/index_other.asp?/2.html",
-      "scraped_at": "2026-07-15T07:30:07Z"
+      "scraped_at": "2026-07-15T13:00:51Z"
     },
     {
       "title": "華碩手持無線超音波MSK骨復健系列之3 + 超音波輔助之診斷與治療 (踝部與腕部)",
@@ -176,7 +176,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "台灣麻醉醫學會2026年健康台灣深耕計畫暨特管法輕中度鎮靜課程_0920高醫場",
@@ -184,7 +184,7 @@
       "source": "TSA",
       "category": "鎮靜課程",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3104&EduType=4",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "~ 115/09/27 麻醉年會活動/報名 [請先繳費,再線上報名] 2026第70屆台灣麻醉醫學會年會暨國際學術研討會",
@@ -192,7 +192,7 @@
       "source": "TSA",
       "category": "年會",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3091&EduType=1",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "[請確認登記成功、收到繳費通知信後再繳費]2026圍術期 POCUS 實戰工作坊(0706更新：報名已額滿，名單詳內)",
@@ -200,7 +200,7 @@
       "source": "TSA",
       "category": "年會工作坊",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3094&EduType=245",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "華碩手持無線超音波疼痛治療系列課程- 下肢神經阻斷術與門診運用",
@@ -208,7 +208,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "台灣麻醉醫學會2026年健康台灣深耕計畫暨特管法輕中度鎮靜課程_1108高醫場",
@@ -216,7 +216,7 @@
       "source": "TSA",
       "category": "鎮靜課程",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3105&EduType=4",
-      "scraped_at": "2026-07-15T07:29:32Z"
+      "scraped_at": "2026-07-15T13:00:04Z"
     },
     {
       "title": "華碩手持無線超音波MSK骨復健系列之4 + 超音波輔助之診斷與治療 (上肢與下肢神經)",
@@ -224,7 +224,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "華碩手持無線超音波MSK骨復健系列之5 + 超音波輔助之診斷與治療 (頸椎與腰椎)",
@@ -232,7 +232,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-07-15T07:29:37Z"
+      "scraped_at": "2026-07-15T13:00:09Z"
     },
     {
       "title": "【課程延期公告】115年7月12日健康台灣深耕計畫暨特管法輕中度鎮靜課程（高醫場）延期辦理",
@@ -240,7 +240,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2290",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "[訓練醫院]115R1第一~三階段第二次名​單公告(暫無異動)",
@@ -248,7 +248,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2278",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "[2026年健康台灣深耕計畫暨特管法輕中度鎮靜課程] 6月21日三總場完訓名單暨證書申請公告",
@@ -256,7 +256,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2286",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "緬懷台灣麻醉醫學會第十七屆理事長-譚培炯教授",
@@ -264,7 +264,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2284",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "衛福部召開「重症醫學專科醫師訓練及甄審籌備委員會」第一次會議 六大醫學會攜手推動重症醫學專科制度新里程",
@@ -272,7 +272,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2282",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "[誠徵專案助理]台灣麻醉醫學會健康台灣深耕計畫(北區、南區各一名)",
@@ -280,7 +280,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2274",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "115年麻醉科專科醫師甄審命題範圍公告",
@@ -288,7 +288,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2276",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "115年3月14日特管法輕中度鎮靜課程完訓名單",
@@ -296,7 +296,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2270",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "115年麻醉科專科醫師甄審日期/命題範圍公告",
@@ -304,7 +304,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2267",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "賀本會程毅君醫師獲康健雜誌遴選為2026年度好醫生(2026 THE GOOD DOCTORS)",
@@ -312,7 +312,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2258",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "台灣麻醉醫學會聲明",
@@ -320,7 +320,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2145",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "即日起，本會會員/準會員繳交常年會費可選擇[超商代收]或[轉帳]方式",
@@ -328,7 +328,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2031",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "台灣麻醉醫學會第三十三屆程廣義理事長暨全體理監事/功能委員會及秘書處敬祝您2026端午節健康快樂",
@@ -336,7 +336,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2285",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "緬懷台灣麻醉醫學會第十三、十四屆理事長-張傳林教授",
@@ -344,7 +344,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2280",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "學會會址整修公告暨秘書處聯絡方式調整說明(06/11更新)",
@@ -352,7 +352,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2277",
-      "scraped_at": "2026-07-15T07:29:33Z"
+      "scraped_at": "2026-07-15T13:00:05Z"
     },
     {
       "title": "115年台灣麻醉醫學會分區(北、中、南、東、雲嘉、桃竹苗)聯合討論會排程",
@@ -360,7 +360,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=2264",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "114年台灣麻醉醫學會分區(北、中、南、東、雲嘉、桃竹苗)聯合討論會排程",
@@ -368,7 +368,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=2154",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "113年台灣麻醉醫學會分區(北、中、南、東、雲嘉、桃竹苗)聯合討論會排程",
@@ -376,7 +376,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=2060",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "112年台灣麻醉醫學會分區(北、中、南、東、雲嘉、桃竹苗)聯合討論會排程",
@@ -384,7 +384,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=1954",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "111年台灣麻醉醫學會分區(北、中、南、東、雲嘉、桃竹苗)聯合討論會排程",
@@ -392,7 +392,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=876",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "110年台灣麻醉醫學會(北、中、南、東、雲嘉、桃竹苗)六區聯合討論會行程",
@@ -400,7 +400,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=764",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "因嚴重特殊傳染性肺炎疫情影響，月會暫緩辦理公告，請會員朋友勿前往以免向隅",
@@ -408,7 +408,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=679",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "109年台灣麻醉醫學會(北、中、南、東、雲嘉)五區聯合討論會行程",
@@ -416,7 +416,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=669",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "108年台灣麻醉醫學會(北、中、南、東、雲嘉)五區聯合討論會行程",
@@ -424,7 +424,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=560",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "107年台灣麻醉醫學會(北、中、南、東、雲嘉)五區聯合討論會行程",
@@ -432,7 +432,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=453",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "我們需要你的聲音四月份中區月會演講邀請(請直接聯繫劉時凱監事)",
@@ -440,7 +440,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=343",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "106年台灣麻醉醫學會(北、中、南、東、雲嘉)五區聯合討論會行程",
@@ -448,7 +448,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=333",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "105年台灣麻醉醫學會(北、中、南、東、雲嘉)五區聯合討論會行程",
@@ -456,7 +456,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=189",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "104年台灣麻醉醫學會(北、中、南、東、雲嘉)五區聯合討論會行程",
@@ -464,7 +464,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=97",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "103年台灣麻醉醫學會各地區麻醉月會主辦醫院表",
@@ -472,7 +472,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=11",
-      "scraped_at": "2026-07-15T07:29:34Z"
+      "scraped_at": "2026-07-15T13:00:06Z"
     },
     {
       "title": "台灣鎮靜麻醉醫學會 (TSIVA) 誠意邀請本會會員參與出席2026年世界靜脈麻醉醫學會（WorldSIVA）澳門大會",
@@ -480,7 +480,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2288",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "國科會研究誠信電子報第 61 期 2025年6月 [專欄文章]分享：您的作品或是純AI 的輸出？ ─ 從著作權與 CC 授權學習 AI 輔助的標示要素",
@@ -488,7 +488,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2250",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "115年1月17日SCS 認證課程－臨床應用與模擬實作工作坊",
@@ -496,7 +496,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2254",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "【１２/０６GAI 臨床應用工作坊】台北場登場 —— 從 RAG 到臨床決策 AI Agent 實作，限額16人，報名從速!",
@@ -504,7 +504,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2245",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "[本會會員享報名優惠，早鳥延長至11月14日]TSRA-PM x RA Asia 2025",
@@ -512,7 +512,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2236",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "Join the WFSA Marathon Session on World Anaesthesia Day (16 October 2025).",
@@ -520,7 +520,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2234",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "114年重症醫學專科醫師甄審即日起至10月14日止接受報名",
@@ -528,7 +528,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2211",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "Critical Care Reviews Down Under 2025 (9–10 December 2025)",
@@ -536,7 +536,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2208",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "Asian Australasian Congress of Anaesthesiologists (AACA 2026)(6–8 February 2026)",
@@ -544,7 +544,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2209",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "Peri-Operative Care: An Anesthesia Expert Webinar Series(August 28th 2025)",
@@ -552,7 +552,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2207",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "114年重症醫學核心教育線上課程 即日起開放報名(可選擇實體課程或課後線上影音觀看)",
@@ -560,7 +560,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2197",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "Book Your Seat Now: 7th ESRA Residents & Trainees Workshop",
@@ -568,7 +568,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2177",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "WICC Abstract Submission Deadline Extended to March 28.",
@@ -576,7 +576,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2172",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "WFSA Webinar - Breathing easy: from masks to mastery of the paediatric airway",
@@ -584,7 +584,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2170",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "ASCA 2025 Bali | 1st Announcement",
@@ -592,7 +592,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2169",
-      "scraped_at": "2026-07-15T07:29:35Z"
+      "scraped_at": "2026-07-15T13:00:07Z"
     },
     {
       "title": "2025麻醉年會優秀海報論文競賽得獎名單",
@@ -600,7 +600,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2243",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2025年台灣麻醉醫學會年會『麻醉\"閃\"擂台競賽』優勝名單",
@@ -608,7 +608,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2244",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2025年台灣麻醉醫學會年會失物招領公告",
@@ -616,7 +616,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2242",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2025【童瑞恭教授夫婦麻醉學講座-教研標竿平台】麻醉照護教育訓練教學標竿分享得獎名單",
@@ -624,7 +624,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2237",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "[年會競賽公告]1. 優秀海報論文；2.麻醉",
@@ -632,7 +632,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2230",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2025台灣麻醉醫學會年會早鳥報名至10月3日止/2025 TSA Annual Meeting Early Bird Registration until October 3",
@@ -640,7 +640,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2192",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2025台灣麻醉醫學會年會麻醉",
@@ -648,7 +648,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2190",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2025台灣麻醉醫學會年會線上投稿即日起至8月31日止",
@@ -656,7 +656,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2187",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "[2025 TSA Annual Meeting] Call for Abstracts and Medical Research Poster Competition",
@@ -664,7 +664,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2188",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2025台灣麻醉醫學會年會贊助邀請",
@@ -672,7 +672,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2181",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "(11.09更新)第二屆台灣麻醉醫學會盃高爾夫球賽得獎名單",
@@ -680,7 +680,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2100",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2023年台灣麻醉醫學會第67屆會員大會暨學術研討會-ERAS工作坊競賽得獎名單",
@@ -688,7 +688,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2040",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2023年台灣麻醉醫學會第67屆會員大會暨學術研討會-快閃擂台得獎名單",
@@ -696,7 +696,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2039",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2023年台灣麻醉醫學會第67屆會員大會暨學術研討會-DSA競賽得獎名單",
@@ -704,7 +704,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2038",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
     },
     {
       "title": "2023年台灣麻醉醫學會第67屆會員大會暨學術研討會-論文海報競賽得獎名單",
@@ -712,7 +712,15 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2032",
-      "scraped_at": "2026-07-15T07:29:36Z"
+      "scraped_at": "2026-07-15T13:00:08Z"
+    },
+    {
+      "title": "以資料庫進行區域麻醉暨止痛臨床研究之AI協作工作坊 ＠August 22",
+      "date": "",
+      "source": "RAPM",
+      "category": "區域麻醉・疼痛介入",
+      "url": "https://rapm.org.tw/news-detail/31",
+      "scraped_at": "2026-07-15T13:00:11Z"
     },
     {
       "title": "疼痛擂台 7：真實病人工作坊-決戰上肢 (肩/肘/腕) ＠August 9",
@@ -720,7 +728,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/29",
-      "scraped_at": "2026-07-15T07:29:39Z"
+      "scraped_at": "2026-07-15T13:00:13Z"
     },
     {
       "title": "TriNetX實作工作坊 ＠September 12",
@@ -728,7 +736,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/28",
-      "scraped_at": "2026-07-15T07:29:41Z"
+      "scraped_at": "2026-07-15T13:00:15Z"
     },
     {
       "title": "基因、腸腦軸、食品毒素、營養與疼痛工作坊 @August 23",
@@ -736,7 +744,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/27",
-      "scraped_at": "2026-07-15T07:29:42Z"
+      "scraped_at": "2026-07-15T13:00:17Z"
     },
     {
       "title": "急診室超音波導引區域止痛技術應用 ＠June 6",
@@ -744,7 +752,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/25",
-      "scraped_at": "2026-07-15T07:29:44Z"
+      "scraped_at": "2026-07-15T13:00:18Z"
     },
     {
       "title": "疼痛擂台 6：真實病人工作坊-腰臀同源 ＠June 28",
@@ -752,7 +760,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/24",
-      "scraped_at": "2026-07-15T07:29:46Z"
+      "scraped_at": "2026-07-15T13:00:20Z"
     },
     {
       "title": "半身麻醉前之經胸前心臟超音波評估研討會 ＠May 3",
@@ -760,7 +768,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/20",
-      "scraped_at": "2026-07-15T07:29:47Z"
+      "scraped_at": "2026-07-15T13:00:22Z"
     },
     {
       "title": "疼痛擂台 5：真實病人工作坊-勁足強膝 ＠April 12",
@@ -768,7 +776,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/19",
-      "scraped_at": "2026-07-15T07:29:49Z"
+      "scraped_at": "2026-07-15T13:00:24Z"
     },
     {
       "title": "癌性疼痛及痠痛工作坊 @March 28",
@@ -776,7 +784,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/18",
-      "scraped_at": "2026-07-15T07:29:51Z"
+      "scraped_at": "2026-07-15T13:00:25Z"
     },
     {
       "title": "疼痛擂台 4：真實病人工作坊-橫掃頸肩＠Jan 30-31",
@@ -784,7 +792,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/16",
-      "scraped_at": "2026-07-15T07:29:52Z"
+      "scraped_at": "2026-07-15T13:00:27Z"
     },
     {
       "title": "2025 台灣區域麻醉暨止痛醫學會年會暨亞洲區域麻醉國際研討會",
@@ -792,7 +800,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/6",
-      "scraped_at": "2026-07-15T07:29:54Z"
+      "scraped_at": "2026-07-15T13:00:29Z"
     },
     {
       "title": "骨科手術超音波神經阻斷工作坊 @September 27",
@@ -800,7 +808,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/11",
-      "scraped_at": "2026-07-15T07:29:55Z"
+      "scraped_at": "2026-07-15T13:00:30Z"
     },
     {
       "title": "1st NYSORA Boutique Workshop in Taiwan",
@@ -808,7 +816,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/4",
-      "scraped_at": "2026-07-15T07:30:00Z"
+      "scraped_at": "2026-07-15T13:00:35Z"
     },
     {
       "title": "[截止報名] 2026 TSCVA心臟超音波初階工作坊-三總場次",
@@ -816,7 +824,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/academic-activities/427-2026-tscva.html",
-      "scraped_at": "2026-07-15T07:30:04Z"
+      "scraped_at": "2026-07-15T13:00:39Z"
     },
     {
       "title": "[開放報名中-限額報名]2025.09.06(六)心臟跨團隊:血液動力學工作坊(地點:台北南港漢來大飯店)",
@@ -824,7 +832,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/academic-activities/418-2025-09-06.html",
-      "scraped_at": "2026-07-15T07:30:04Z"
+      "scraped_at": "2026-07-15T13:00:39Z"
     },
     {
       "title": "[已關閉報名]2025.08.29(五)心臟跨團隊:心臟麻醉學分課程(地點:高雄H2O水京棧)",
@@ -832,7 +840,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/academic-activities/416-2025-08-29-h2o.html",
-      "scraped_at": "2026-07-15T07:30:04Z"
+      "scraped_at": "2026-07-15T13:00:39Z"
     },
     {
       "title": "https://www.facebook.com/tscvaanes/",
@@ -840,7 +848,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.facebook.com/tscvaanes/",
-      "scraped_at": "2026-07-15T07:30:04Z"
+      "scraped_at": "2026-07-15T13:00:39Z"
     },
     {
       "title": "*{轉發活動訊息} 116年06月28日(日)台灣術後加速康復學會、國泰綜合醫院-2026年年亞太術後加速康復（ERAS）夥伴國際專家論壇暨學會年會",
@@ -848,7 +856,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/other-academic-activities/428-116-06-28-2026-eras.html",
-      "scraped_at": "2026-07-15T07:30:04Z"
+      "scraped_at": "2026-07-15T13:00:40Z"
     },
     {
       "title": "轉發活動訊息:  ASCPaLM 2026",
@@ -856,7 +864,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/other-academic-activities/424-ascpalm-2026.html",
-      "scraped_at": "2026-07-15T07:30:04Z"
+      "scraped_at": "2026-07-15T13:00:40Z"
     },
     {
       "title": "轉發活動訊息: 20240913-14_2025台灣呼吸道處理醫學會年會暨國際學術研討會",
@@ -864,7 +872,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/other-academic-activities/414-20240913-14-2025.html",
-      "scraped_at": "2026-07-15T07:30:04Z"
+      "scraped_at": "2026-07-15T13:00:40Z"
     },
     {
       "title": "轉發活動訊息:114年10月18日(六)「特管辦法施行實驗室開發檢測之人員訓練課程(核發報告檢測人員-醫師)」",
@@ -872,7 +880,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/other-academic-activities/411-114-10-18.html",
-      "scraped_at": "2026-07-15T07:30:04Z"
+      "scraped_at": "2026-07-15T13:00:40Z"
     },
     {
       "title": "轉發活動訊息- [本會核定總積分12分]-114.04.19-20台灣疼痛醫學會年會暨國際學術研討會「全方位的疼痛照護 : 創新與整合」",
@@ -880,7 +888,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/other-academic-activities/408-12-114-04-19-20.html",
-      "scraped_at": "2026-07-15T07:30:04Z"
+      "scraped_at": "2026-07-15T13:00:40Z"
     },
     {
       "title": "Join us in Singapore for the 12th ERAS® World Congress!",
@@ -888,7 +896,7 @@
       "source": "TWERAS",
       "category": "ERAS・周術期",
       "url": "https://tweras.org/12th-eras-world-congress-singapore/",
-      "scraped_at": "2026-07-15T07:30:05Z"
+      "scraped_at": "2026-07-15T13:00:42Z"
     },
     {
       "title": "［大會手冊］2025年亞太術後加速康復ERAS夥伴國際專家論壇暨學會年會",
@@ -896,7 +904,7 @@
       "source": "TWERAS",
       "category": "ERAS・周術期",
       "url": "https://tweras.org/2025booklet/",
-      "scraped_at": "2026-07-15T07:30:05Z"
+      "scraped_at": "2026-07-15T13:00:42Z"
     },
     {
       "title": "【115年度】台北區醫院總額風險移撥款 ERAS 計畫：公告文件及相關附件資料",
@@ -904,7 +912,7 @@
       "source": "TWERAS",
       "category": "ERAS・周術期",
       "url": "https://tweras.org/20260706_notice/",
-      "scraped_at": "2026-07-15T07:30:05Z"
+      "scraped_at": "2026-07-15T13:00:42Z"
     },
     {
       "title": "https://forms.gle/eCQsibUAJX4TAdrR6/",
@@ -912,7 +920,7 @@
       "source": "TSCCM",
       "category": "重症・ACLS",
       "url": "https://forms.gle/eCQsibUAJX4TAdrR6/",
-      "scraped_at": "2026-07-15T07:30:08Z"
+      "scraped_at": "2026-07-15T13:00:52Z"
     },
     {
       "title": "報名已截止，如欲參加課程，請至現場報名。現場報名 600 元。",
@@ -920,7 +928,7 @@
       "source": "TSCCM",
       "category": "重症・ACLS",
       "url": "https://www.tsccm.org.tw/od/Academic/index.asp?act_kindid=2",
-      "scraped_at": "2026-07-15T07:30:10Z"
+      "scraped_at": "2026-07-15T13:00:53Z"
     }
   ]
 }
