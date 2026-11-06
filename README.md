@@ -1,11 +1,11 @@
 # 麻醉科進修雷達 — Anesth Radar
 
-自動彙整台灣麻醉相關學會的課程與公告 → 依興趣關鍵字評分、貼主題標籤 → 輸出 `data/events.json`
+自動彙整台灣麻醉相關學會的課程與公告 → 依標題關鍵字貼主題標籤、濾掉低相關公告 → 輸出 `data/events.json`
 → 純前端網站（`index.html`）分「課程列表 / 活動行事曆」瀏覽。
 
 線上版：<https://moved-brian.github.io/anesth-radar/>（GitHub Actions 每 3 小時自動更新）
 
-> 評分、NEW 標籤、已看／收藏的做法移植自 pulm-radar（改寫自
+> 關鍵字比對、NEW 標籤、已看／收藏的做法移植自 pulm-radar（改寫自
 > [drpwchen/paper-radar](https://github.com/drpwchen/paper-radar)，MIT），
 > 把對象從「論文」換成「學會活動消息」。
 
@@ -28,7 +28,7 @@ scrapers/*.py ── 爬 6 個學會的公開公告頁
 run.py ── dedup
       → enrich.fill_missing_dates()   沒日期的，從標題裡「帶年份的完整日期」推定
       → 過濾過期（預設保留過去 7 天）
-      → scoring.score_event()         interest_model.json 評分 + 主題標籤
+      → scoring.score_event()         interest_model.json 關鍵字比對 → 主題標籤、低相關判定
       → enrich.FirstSeenStore         first_seen 生命週期（NEW 標籤用）
       → data/events.json  +  data/first_seen.json
       │
@@ -39,8 +39,8 @@ index.html ── fetch('data/events.json') 渲染；收藏／已看存瀏覽器
 
 | 檔案 | 角色 | 常改嗎 |
 |---|---|---|
-| **`interest_model.json`** | 興趣關鍵字權重、負向關鍵字、門檻 | ✅ 想調排序就改這個 |
-| `scoring.py` | 評分核心（讀 `interest_model.json`） | ⚠ 改評分邏輯才動 |
+| **`interest_model.json`** | 主題關鍵字、負向關鍵字、低相關門檻 | ✅ 想調主題標籤或「哪些算低相關」就改這個 |
+| `scoring.py` | 關鍵字比對核心（讀 `interest_model.json`） | ⚠ 改比對邏輯才動 |
 | `enrich.py` | 標題補日期、活動 ID、first_seen | ⚠ 少動 |
 | `run.py` | 主流程 | ⚠ 少動 |
 | `scrapers/` | 各學會爬蟲 | 🔧 學會改版時才修 |
@@ -71,7 +71,7 @@ python run.py --all-history
 # 只印統計，不寫檔案
 python run.py --dry-run
 
-# 改完 interest_model.json 後，不重爬、只重算分數
+# 改完 interest_model.json 後，不重爬、只重新貼標籤與判定低相關
 python run.py --rescore
 ```
 
@@ -85,10 +85,10 @@ python -m http.server 8898
 
 ## 網站功能
 
-- 🔍 搜尋標題／來源／主題；排序可選「依活動日期／依推薦分數／最新上架優先」
-- 🎯 推薦、✨ NEW（7 天內第一次被爬到）、⭐ 已收藏 三個快速檢視
+- 🔍 搜尋標題／來源／主題；排序可選「依活動日期／最新上架優先」
+- ✨ NEW（7 天內第一次被爬到）、⭐ 已收藏 兩個快速檢視
 - 來源／分類／主題標籤篩選；篩選條件會記住
-- 每張卡片：主題標籤、⚠ 警示（報名截止、取消…）、倒數天數、右側推薦分數（點一下看分數怎麼算的）
+- 每張卡片：主題標籤、⚠ 警示（報名截止、取消…）、倒數天數
 - ⭐ 收藏、✅ 已看（已看的下次開啟預設隱藏）、📅 加入 Google 日曆
 - 「自上次造訪以來新增 N 筆」提示條，點一下只看新增的
 - 低相關公告（名單、人事、過期資訊）預設隱藏，勾「顯示低相關公告」才出現
@@ -100,7 +100,7 @@ python -m http.server 8898
 
 ```jsonc
 {
-  "thresholds": { "recommend": 3, "candidate": 1 },  // >= recommend → 推薦；>= candidate → 一般；其餘 → 低相關（預設隱藏）
+  "thresholds": { "recommend": 3, "candidate": 1 },  // 分數 < candidate → 低相關（網站預設隱藏）；recommend 目前網站沒用到
   "positive": [                                       // 每組任一 keyword 命中就加 weight 一次，並貼上 tag
     { "weight": 3, "tag": "區域麻醉 / 神經阻斷", "keywords": ["區域麻醉", "神經阻斷", "nerve block", "ESRA"] }
   ],
@@ -120,7 +120,8 @@ python -m http.server 8898
 - **短英文縮寫用字界比對**：≤5 字、全 ASCII、含大寫的關鍵字（`AI`、`TEE`、`ICU`、`ERAS`…）
   不會命中 `pain`、`committee` 這類子字串；其餘（含所有中文）是單純子字串比對。
 - **exception 也是子字串比對**，要寫具體片語（`報名名單`），別放太通用的字。
-- 改完跑 `python run.py --rescore` 立刻看到新排序；`data/events.json` 每筆的 `why` 欄位是分數分解。
+- 網站**不顯示分數**；分數只在後端用來判定「低相關」。想知道某一筆為什麼被隱藏，看 `data/events.json` 裡該筆的 `score` 與 `why`（分數分解）。
+- 改完跑 `python run.py --rescore` 即可重新判定，不必重爬。
 
 ## 輸出格式 (data/events.json)
 
@@ -174,7 +175,7 @@ GitHub Actions（`.github/workflows/scrape.yml`）每 3 小時跑一次 `python 
 ## 注意事項
 
 - 本工具僅抓取**公開公告頁**的標題與連結，導回原站，非官方彙整
-- 推薦分數只是標題關鍵字比對的結果，僅供排序參考，實際資訊以原公告為準
+- 主題標籤與「低相關」判定只是標題關鍵字比對的結果，實際資訊以原公告為準
 - TSA 活動列表使用 JavaScript POST 分頁，預設只爬前 5 頁（最近活動）
 - TSCCM 結果會過濾麻醉相關關鍵字（麻醉、插管、ACLS 等）
 - RAPM 標題的活動日沒有年份（`＠December 4-6`），用活動頁的公告日推定年份

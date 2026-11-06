@@ -346,38 +346,14 @@ a.event-title:hover { color: var(--teal-dim); text-decoration: underline; }
 .act.star.on { background: #fff6e5; border-color: var(--amber); color: #8a5a00; font-weight: 600; }
 .act.seen.on { background: var(--gray-100); border-color: var(--gray-400); color: var(--navy); font-weight: 600; }
 
-/* 分數 chip（點一下展開分數分解） */
-.score {
-  min-width: 32px; height: 28px;
-  padding: 0 6px;
-  border-radius: 7px;
-  border: none;
-  display: flex; align-items: center; justify-content: center;
-  font: inherit;
-  font-weight: 700; font-size: 13px;
-  font-variant-numeric: tabular-nums;
-  background: var(--gray-100); color: var(--gray-600);
-  cursor: pointer;
+.event-arrow {
+  color: var(--gray-400);
+  font-size: 16px;
   align-self: center;
+  text-decoration: none;
+  transition: color 0.12s, transform 0.12s;
 }
-.score.hi  { background: rgba(0,191,174,0.15); color: var(--teal-dim); }
-.score.mid { background: #fff3d6; color: #8a5a00; }
-.score:hover, .score:focus-visible { outline: 2px solid var(--teal); }
-.event-arrow { color: var(--gray-400); font-size: 16px; align-self: center; }
-
-.why {
-  margin-top: 8px; padding: 8px 10px;
-  border: 1px solid var(--gray-200); border-radius: var(--radius);
-  background: var(--white);
-  font-size: 12px; color: var(--gray-600);
-  max-width: 360px;
-}
-.why[hidden] { display: none; }
-.why-row { display: flex; justify-content: space-between; gap: 12px; padding: 1px 0; }
-.why-n { font-variant-numeric: tabular-nums; font-weight: 600; }
-.why-n.pos { color: var(--teal-dim); }
-.why-n.neg { color: #b3261e; }
-.why-total { border-top: 1px solid var(--gray-200); margin-top: 4px; padding-top: 4px; color: var(--navy); }
+.event-card:hover .event-arrow { color: var(--teal-dim); transform: translateX(2px); }
 
 /* ── CALENDAR ─────────────────────────────────────────────────── */
 .cal-header {
@@ -453,7 +429,6 @@ a.event-title:hover { color: var(--teal-dim); text-decoration: underline; }
   line-height: 1.4;
   transition: background 0.1s;
 }
-.cal-event.cand { background: var(--navy-light); }
 .cal-event.low  { background: var(--gray-600); }
 .cal-event.star { background: var(--amber); color: #3d2a00; font-weight: 700; }
 .cal-event:hover { background: var(--teal-dim); color: #fff; }
@@ -496,7 +471,6 @@ footer a { color: var(--teal); text-decoration: none; }
   .event-date .day { font-size: 18px; }
   .filter-bar { padding: 10px 12px; }
   .filter-count { margin-left: 0; width: 100%; white-space: normal; }
-  .score { min-width: 28px; height: 24px; font-size: 12px; }
   .logo-sub { display: none; }
   .cal-day { min-height: 56px; padding: 4px; }
   .cal-event, .cal-more { display: none; }
@@ -543,7 +517,6 @@ footer a { color: var(--teal); text-decoration: none; }
       <input type="search" id="search" placeholder="🔍 搜尋標題 / 來源 / 主題…" aria-label="搜尋活動">
       <select id="sort" aria-label="排序方式">
         <option value="date">依活動日期</option>
-        <option value="rec">依推薦分數</option>
         <option value="new">最新上架優先</option>
       </select>
       <button type="button" id="fb-toggle" class="fb-toggle" aria-expanded="true" aria-controls="fb-more">篩選 ▾</button>
@@ -551,7 +524,6 @@ footer a { color: var(--teal); text-decoration: none; }
     <div class="fb-row">
       <div class="filter-chips" id="view-chips">
         <button type="button" class="chip" data-view="all">全部</button>
-        <button type="button" class="chip" data-view="rec">🎯 推薦</button>
         <button type="button" class="chip" data-view="new">✨ NEW</button>
         <button type="button" class="chip" data-view="star">⭐ 已收藏</button>
       </div>
@@ -608,7 +580,7 @@ footer a { color: var(--teal); text-decoration: none; }
 
 <footer>
   資料自動彙整自各學會的公開公告頁，僅顯示標題與連結並導回原站，非官方彙整，實際資訊以原公告為準。<br>
-  推薦分數與主題標籤由標題關鍵字自動評分，僅供排序參考；收藏／已看只存在這台裝置的瀏覽器。<br>
+  主題標籤由標題關鍵字自動比對，僅供參考；收藏／已看只存在這台裝置的瀏覽器。<br>
   來源：TSA・疼痛醫學會・RAPM・TSCVA・TWERAS・TSCCM
 </footer>
 
@@ -682,7 +654,7 @@ async function boot() {
   render();
 }
 
-// 舊格式（沒有 id / score / tags）的 events.json 也要能顯示
+// 舊格式（沒有 id / tags）的 events.json 也要能顯示
 function normalizeEvent(e) {
   const d = parseYmd(e.date);
   const first = parseYmd(e.first_seen);
@@ -718,8 +690,8 @@ function pruneStaleFilters() {
   filt.sources = filt.sources.filter(x => src.has(x));
   filt.cats    = filt.cats.filter(x => cat.has(x));
   filt.tags    = filt.tags.filter(x => tag.has(x));
-  if (!['date','rec','new'].includes(filt.sort)) filt.sort = 'date';
-  if (!['all','rec','new','star','visit'].includes(filt.view)) filt.view = 'all';
+  if (!['date','new'].includes(filt.sort)) filt.sort = 'date';
+  if (!['all','new','star','visit'].includes(filt.view)) filt.view = 'all';
   if (filt.view === 'visit' && !visit.prev) filt.view = 'all';
 }
 
@@ -831,7 +803,6 @@ function baseFilter(e) {
   const q = filt.q.trim().toLowerCase();
   if (q && !q.split(/\s+/).every(w => e._search.includes(w))) return false;
   switch (filt.view) {
-    case 'rec':   return e.tier === 'recommended';
     case 'new':   return e._isNew;
     case 'star':  return !!act(e).star;
     case 'visit': return !!visit.prev && !!e.first_seen && e.first_seen >= visit.prev;
@@ -855,10 +826,8 @@ function filteredEvents() {
 function cmpFor(sort) {
   const dateKey = e => e.date || '9999-99-99';              // 日期未定排最後
   const byDate  = (a, b) => dateKey(a).localeCompare(dateKey(b));
-  const byScore = (a, b) => (b.score ?? 0) - (a.score ?? 0);
-  if (sort === 'rec') return (a, b) => byScore(a, b) || byDate(a, b);
   if (sort === 'new') return (a, b) => (b.first_seen || '').localeCompare(a.first_seen || '') || byDate(a, b);
-  return (a, b) => byDate(a, b) || byScore(a, b);
+  return byDate;
 }
 
 // ── Render ───────────────────────────────────────────────────
@@ -974,10 +943,8 @@ function cardHtml(e, showYear) {
           <button type="button" class="act seen${a.seen ? ' on' : ''}" data-act="seen" aria-pressed="${!!a.seen}">✅ 已看</button>`;
   if (d && !isPast) acts += `<a class="act" href="${escHtml(gcalUrl(e))}" target="_blank" rel="noopener">📅 加入 Google 日曆</a>`;
 
-  const hasScore = typeof e.score === 'number';
-  const scoreCls = e.tier === 'recommended' ? ' hi' : e.tier === 'candidate' ? ' mid' : '';
-  const right = hasScore
-    ? `<button type="button" class="score${scoreCls}" data-act="why" aria-expanded="false" title="推薦分數（點一下看怎麼算的）">${e.score}</button>`
+  const right = url
+    ? `<a class="event-arrow" href="${escHtml(url)}" target="_blank" rel="noopener" aria-label="開啟原公告" tabindex="-1">›</a>`
     : `<div class="event-arrow">›</div>`;
 
   return `
@@ -990,18 +957,9 @@ function cardHtml(e, showYear) {
         <div class="event-acts">
           ${acts}
         </div>
-        ${hasScore ? whyHtml(e) : ''}
       </div>
       ${right}
     </div>`;
-}
-
-function whyHtml(e) {
-  const rows = (Array.isArray(e.why) ? e.why : []).map(([label, v]) => {
-    const n = typeof v === 'number' ? v : 0;
-    return `<div class="why-row"><span>${escHtml(label)}</span><span class="why-n ${n >= 0 ? 'pos' : 'neg'}">${n >= 0 ? '+' : '−'}${Math.abs(n)}</span></div>`;
-  }).join('') || `<div class="why-row"><span>標題沒有命中任何關鍵字</span></div>`;
-  return `<div class="why" hidden>${rows}<div class="why-row why-total"><span>推薦分數</span><span class="why-n">${e.score}</span></div></div>`;
 }
 
 function onCardClick(ev) {
@@ -1011,12 +969,6 @@ function onCardClick(ev) {
   const id = card.dataset.id;
   const kind = btn.dataset.act;
 
-  if (kind === 'why') {
-    const panel = card.querySelector('.why');
-    panel.hidden = !panel.hidden;
-    btn.setAttribute('aria-expanded', String(!panel.hidden));
-    return;
-  }
   const a = actions[id] || (actions[id] = {});
   a[kind] = !a[kind];
   if (!a.star && !a.seen) delete actions[id];
@@ -1064,7 +1016,7 @@ function renderCalendar(events) {
   for (let d = 1; d <= daysInMonth; d++) {
     const dateStr = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
     const dayEvents = (map[dateStr] || []).slice()
-      .sort((a, b) => (!!act(b).star - !!act(a).star) || ((b.score ?? 0) - (a.score ?? 0)));
+      .sort((a, b) => !!act(b).star - !!act(a).star);
     const isToday   = dateStr === TODAY_STR;
 
     html += `<div class="cal-day${isToday?' today':''}${dayEvents.length ? ' has-events' : ''}">`;
@@ -1073,7 +1025,7 @@ function renderCalendar(events) {
 
     dayEvents.forEach((e, i) => {
       const star = !!act(e).star;
-      const cls = ['cal-event', star ? 'star' : e.tier === 'candidate' ? 'cand' : e.tier === 'skipped' ? 'low' : '',
+      const cls = ['cal-event', star ? 'star' : e.tier === 'skipped' ? 'low' : '',
                    i >= 2 ? 'extra' : ''].filter(Boolean).join(' ');
       const label = (star ? '★ ' : '') + e.title;
       const url = safeUrl(e.url);
