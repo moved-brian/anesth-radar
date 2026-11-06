@@ -6,7 +6,7 @@
 <title>麻醉科進修雷達</title>
 <style>
 /* ── Token System ─────────────────────────────────────────────
-   Palette: deep navy (#0f1f3d) × cool white (#f5f7fa) × 
+   Palette: deep navy (#0f1f3d) × cool white (#f5f7fa) ×
             electric teal accent (#00bfae) × warm amber (#f5a623)
    Type: system UI stack (no external font load needed for speed)
    Signature: the "pulse" dot on the header — a live indicator
@@ -20,7 +20,7 @@
   --navy-mid:   #1a3260;
   --navy-light: #243d72;
   --teal:       #00bfae;
-  --teal-dim:   #009e90;
+  --teal-dim:   #00857a;
   --amber:      #f5a623;
   --white:      #f5f7fa;
   --gray-100:   #eef0f4;
@@ -125,11 +125,45 @@ header {
   padding: 14px 16px;
   margin-bottom: 16px;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow);
+}
+.fb-row {
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  box-shadow: var(--shadow);
 }
+#fb-more { display: flex; flex-direction: column; gap: 10px; }
+#fb-more[hidden] { display: none; }
+
+#search {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 7px 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+}
+#search:focus, #sort:focus { outline: 2px solid var(--teal); outline-offset: -1px; }
+#sort, .fb-toggle {
+  padding: 6px 10px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--gray-600);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.fb-toggle:hover { border-color: var(--teal); color: var(--teal-dim); }
+.fb-toggle.on { background: var(--gray-100); color: var(--navy); }
+
 .filter-label {
   font-size: 11px;
   font-weight: 600;
@@ -137,15 +171,17 @@ header {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   white-space: nowrap;
+  min-width: 28px;
 }
 .filter-chips {
-  display: flex; flex-wrap: wrap; gap: 6px;
+  display: flex; flex-wrap: wrap; gap: 6px; flex: 1; min-width: 0;
 }
 .chip {
   padding: 4px 10px;
   border-radius: 20px;
   border: 1px solid var(--gray-200);
   background: var(--gray-100);
+  font: inherit;
   font-size: 12px;
   cursor: pointer;
   color: var(--gray-600);
@@ -153,13 +189,9 @@ header {
   white-space: nowrap;
   user-select: none;
 }
-.chip:hover  { border-color: var(--teal); color: var(--teal); }
-.chip.active { background: var(--teal); border-color: var(--teal); color: #fff; font-weight: 600; }
-
-.filter-divider {
-  width: 1px; height: 24px; background: var(--gray-200);
-  flex-shrink: 0;
-}
+.chip:hover  { border-color: var(--teal); color: var(--teal-dim); }
+.chip.active { background: var(--teal-dim); border-color: var(--teal-dim); color: #fff; font-weight: 600; }
+.chip .n { opacity: 0.7; font-weight: 400; margin-left: 3px; }
 
 .toggle-past {
   display: flex; align-items: center; gap: 6px;
@@ -167,15 +199,33 @@ header {
   font-size: 12px; color: var(--gray-600);
   white-space: nowrap;
 }
-.toggle-past input[type=checkbox] { accent-color: var(--teal); width: 14px; height: 14px; }
+.toggle-past input[type=checkbox] { accent-color: var(--teal-dim); width: 14px; height: 14px; }
 
 .filter-count {
   margin-left: auto;
   font-size: 12px;
-  color: var(--gray-400);
+  color: var(--gray-600);
   white-space: nowrap;
 }
-.filter-count b { color: var(--teal); }
+.filter-count b { color: var(--teal-dim); }
+
+/* 自上次造訪以來新增（可點擊切換） */
+.visit-banner {
+  display: block;
+  width: 100%;
+  margin: -6px 0 16px;
+  padding: 9px 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,133,122,0.35);
+  background: rgba(0,191,174,0.08);
+  color: var(--teal-dim);
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+.visit-banner[hidden] { display: none; }
+.visit-banner.on { background: var(--teal-dim); border-color: var(--teal-dim); color: #fff; }
 
 /* ── EVENT LIST ──────────────────────────────────────────────── */
 #view-list { display: block; }
@@ -186,7 +236,7 @@ header {
 .month-header {
   font-size: 11px;
   font-weight: 700;
-  color: var(--gray-400);
+  color: var(--gray-600);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 20px 0 6px;
@@ -199,21 +249,23 @@ header {
   border-radius: var(--radius);
   padding: 12px 16px;
   display: grid;
-  grid-template-columns: 64px 1fr auto;
+  grid-template-columns: 64px minmax(0, 1fr) auto;
   gap: 0 14px;
   align-items: start;
   margin-bottom: 4px;
-  text-decoration: none;
   color: inherit;
-  transition: border-color 0.12s, box-shadow 0.12s, transform 0.08s;
+  transition: border-color 0.12s, box-shadow 0.12s;
   box-shadow: var(--shadow);
 }
 .event-card:hover {
   border-color: var(--teal);
   box-shadow: 0 4px 20px rgba(0,191,174,0.12);
-  transform: translateY(-1px);
 }
-.event-card.past { opacity: 0.5; }
+.event-card.past, .event-card.seen, .event-card.low { opacity: 0.55; }
+.event-card.past:hover, .event-card.seen:hover, .event-card.low:hover,
+.event-card.past:focus-within, .event-card.seen:focus-within, .event-card.low:focus-within { opacity: 1; }
+.event-card.starred { border-left: 3px solid var(--amber); }
+.event-card.today   { border-left: 3px solid var(--teal); }
 
 .event-date {
   text-align: center;
@@ -225,14 +277,16 @@ header {
   line-height: 1;
   color: var(--navy);
 }
-.event-date .mon {
+.event-date .mon, .event-date .yr {
   font-size: 10px;
-  color: var(--gray-400);
+  color: var(--gray-600);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+.event-date.inferred .day { color: var(--gray-600); }
+.event-date.inferred .day::before { content: '≈'; font-size: 12px; font-weight: 400; vertical-align: middle; }
 .event-card.today .event-date { border-right-color: var(--teal); }
-.event-card.today .event-date .day { color: var(--teal); }
+.event-card.today .event-date .day { color: var(--teal-dim); }
 
 .event-body { min-width: 0; }
 .event-title {
@@ -245,7 +299,10 @@ header {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  overflow-wrap: anywhere;
+  text-decoration: none;
 }
+a.event-title:hover { color: var(--teal-dim); text-decoration: underline; }
 .event-meta {
   display: flex; flex-wrap: wrap; gap: 5px; align-items: center;
 }
@@ -254,29 +311,73 @@ header {
   padding: 2px 7px;
   border-radius: 10px;
   font-weight: 500;
+  white-space: nowrap;
 }
-.badge-source {
-  background: var(--navy);
-  color: #fff;
-}
+.badge-source { background: var(--navy); color: #fff; }
 .badge-cat {
   background: var(--gray-100);
   color: var(--gray-600);
   border: 1px solid var(--gray-200);
 }
+.badge-new  { background: var(--amber); color: #3d2a00; font-weight: 700; }
+.badge-tag  { background: rgba(0,191,174,0.10); color: var(--teal-dim); border: 1px solid rgba(0,133,122,0.30); }
+.badge-warn { background: #fdecea; color: #b3261e; border: 1px solid #f5c6c2; }
+.event-when { font-size: 11px; color: var(--gray-600); white-space: nowrap; }
+.event-when.soon { color: var(--teal-dim); font-weight: 600; }
 
-.event-arrow {
-  color: var(--gray-400);
-  font-size: 16px;
-  padding-top: 4px;
-  align-self: center;
-  flex-shrink: 0;
-  transition: color 0.12s, transform 0.12s;
+/* 動作鈕：⭐收藏 / ✅已看 / 📅加入日曆（存在瀏覽器 localStorage） */
+.event-acts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.act {
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+  background: #fff;
+  color: var(--gray-600);
+  font: inherit;
+  font-size: 11px;
+  line-height: 1.5;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.12s;
 }
-.event-card:hover .event-arrow { color: var(--teal); transform: translateX(2px); }
+.act:hover { border-color: var(--teal); color: var(--teal-dim); }
+.act:active { transform: scale(0.95); }
+.act.star.on { background: #fff6e5; border-color: var(--amber); color: #8a5a00; font-weight: 600; }
+.act.seen.on { background: var(--gray-100); border-color: var(--gray-400); color: var(--navy); font-weight: 600; }
 
-/* today highlight */
-.event-card.today { border-left: 3px solid var(--teal); }
+/* 分數 chip（點一下展開分數分解） */
+.score {
+  min-width: 32px; height: 28px;
+  padding: 0 6px;
+  border-radius: 7px;
+  border: none;
+  display: flex; align-items: center; justify-content: center;
+  font: inherit;
+  font-weight: 700; font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  background: var(--gray-100); color: var(--gray-600);
+  cursor: pointer;
+  align-self: center;
+}
+.score.hi  { background: rgba(0,191,174,0.15); color: var(--teal-dim); }
+.score.mid { background: #fff3d6; color: #8a5a00; }
+.score:hover, .score:focus-visible { outline: 2px solid var(--teal); }
+.event-arrow { color: var(--gray-400); font-size: 16px; align-self: center; }
+
+.why {
+  margin-top: 8px; padding: 8px 10px;
+  border: 1px solid var(--gray-200); border-radius: var(--radius);
+  background: var(--white);
+  font-size: 12px; color: var(--gray-600);
+  max-width: 360px;
+}
+.why[hidden] { display: none; }
+.why-row { display: flex; justify-content: space-between; gap: 12px; padding: 1px 0; }
+.why-n { font-variant-numeric: tabular-nums; font-weight: 600; }
+.why-n.pos { color: var(--teal-dim); }
+.why-n.neg { color: #b3261e; }
+.why-total { border-top: 1px solid var(--gray-200); margin-top: 4px; padding-top: 4px; color: var(--navy); }
 
 /* ── CALENDAR ─────────────────────────────────────────────────── */
 .cal-header {
@@ -311,11 +412,12 @@ header {
 .cal-wd:last-child  { color: #60a5fa; }
 
 .cal-days {
-  display: grid; grid-template-columns: repeat(7, 1fr);
+  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
   border-top: 1px solid var(--gray-200);
 }
 .cal-day {
   min-height: 72px;
+  min-width: 0;
   border-right: 1px solid var(--gray-200);
   border-bottom: 1px solid var(--gray-200);
   padding: 6px;
@@ -324,7 +426,7 @@ header {
 .cal-day:nth-child(7n) { border-right: none; }
 .cal-day.other-month .cal-day-num { color: var(--gray-200); }
 .cal-day.today .cal-day-num {
-  background: var(--teal); color: #fff;
+  background: var(--teal-dim); color: #fff;
   border-radius: 50%; width: 22px; height: 22px;
   display: flex; align-items: center; justify-content: center;
   font-weight: 700;
@@ -351,23 +453,23 @@ header {
   line-height: 1.4;
   transition: background 0.1s;
 }
-.cal-event:hover { background: var(--teal); }
-.cal-event.cat-月會        { background: #1a3260; }
-.cal-event.cat-年會        { background: #7c3aed; }
-.cal-event.cat-繼教課程    { background: #0369a1; }
-.cal-event.cat-工作坊,
-.cal-event.cat-年會工作坊  { background: #065f46; }
-.cal-event.cat-重症        { background: #9f1239; }
-.cal-event.cat-ERAS        { background: #92400e; }
+.cal-event.cand { background: var(--navy-light); }
+.cal-event.low  { background: var(--gray-600); }
+.cal-event.star { background: var(--amber); color: #3d2a00; font-weight: 700; }
+.cal-event:hover { background: var(--teal-dim); color: #fff; }
+.cal-day:not(.expanded) .cal-event.extra { display: none; }
+.cal-day.expanded .cal-more { display: none; }
 .cal-more {
-  font-size: 10px; color: var(--gray-400);
+  font-size: 10px; color: var(--gray-600);
   padding: 1px 4px; cursor: pointer;
+  background: none; border: none; text-align: left; font-family: inherit;
 }
+.cal-more:hover { color: var(--teal-dim); }
 
 /* ── EMPTY STATE ─────────────────────────────────────────────── */
 .empty {
   text-align: center; padding: 60px 20px;
-  color: var(--gray-400);
+  color: var(--gray-600);
 }
 .empty-icon { font-size: 40px; margin-bottom: 12px; }
 .empty p { font-size: 14px; }
@@ -387,21 +489,27 @@ footer a { color: var(--teal); text-decoration: none; }
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .event-card {
-    grid-template-columns: 50px 1fr auto;
+    grid-template-columns: 50px minmax(0, 1fr) auto;
     gap: 0 10px;
     padding: 10px 12px;
   }
   .event-date .day { font-size: 18px; }
   .filter-bar { padding: 10px 12px; }
+  .filter-count { margin-left: 0; width: 100%; white-space: normal; }
+  .score { min-width: 28px; height: 24px; font-size: 12px; }
+  .logo-sub { display: none; }
   .cal-day { min-height: 56px; padding: 4px; }
-  .cal-event { display: none; }
+  .cal-event, .cal-more { display: none; }
   .cal-day.has-events::after {
     content: '●';
     font-size: 8px;
-    color: var(--teal);
+    color: var(--teal-dim);
     display: block;
     text-align: center;
   }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-pulse { animation: none; }
 }
 </style>
 </head>
@@ -422,8 +530,8 @@ footer a { color: var(--teal); text-decoration: none; }
 
 <div class="tabs">
   <div class="tabs-inner">
-    <button class="tab-btn active" onclick="switchTab('list', this)">📋 課程列表</button>
-    <button class="tab-btn" onclick="switchTab('calendar', this)">📅 活動行事曆</button>
+    <button class="tab-btn active" data-tab="list">📋 課程列表</button>
+    <button class="tab-btn" data-tab="calendar">📅 活動行事曆</button>
   </div>
 </div>
 
@@ -431,18 +539,47 @@ footer a { color: var(--teal); text-decoration: none; }
 
   <!-- Filter bar -->
   <div class="filter-bar">
-    <span class="filter-label">來源</span>
-    <div class="filter-chips" id="source-chips"></div>
-    <div class="filter-divider"></div>
-    <span class="filter-label">分類</span>
-    <div class="filter-chips" id="cat-chips"></div>
-    <div class="filter-divider"></div>
-    <label class="toggle-past">
-      <input type="checkbox" id="hide-past" checked onchange="render()">
-      排除過期
-    </label>
-    <div class="filter-count" id="count-label"></div>
+    <div class="fb-row">
+      <input type="search" id="search" placeholder="🔍 搜尋標題 / 來源 / 主題…" aria-label="搜尋活動">
+      <select id="sort" aria-label="排序方式">
+        <option value="date">依活動日期</option>
+        <option value="rec">依推薦分數</option>
+        <option value="new">最新上架優先</option>
+      </select>
+      <button type="button" id="fb-toggle" class="fb-toggle" aria-expanded="true" aria-controls="fb-more">篩選 ▾</button>
+    </div>
+    <div class="fb-row">
+      <div class="filter-chips" id="view-chips">
+        <button type="button" class="chip" data-view="all">全部</button>
+        <button type="button" class="chip" data-view="rec">🎯 推薦</button>
+        <button type="button" class="chip" data-view="new">✨ NEW</button>
+        <button type="button" class="chip" data-view="star">⭐ 已收藏</button>
+      </div>
+      <div class="filter-count" id="count-label"></div>
+    </div>
+    <div id="fb-more">
+      <div class="fb-row">
+        <span class="filter-label">來源</span>
+        <div class="filter-chips" id="source-chips"></div>
+      </div>
+      <div class="fb-row">
+        <span class="filter-label">分類</span>
+        <div class="filter-chips" id="cat-chips"></div>
+      </div>
+      <div class="fb-row" id="tag-row">
+        <span class="filter-label">主題</span>
+        <div class="filter-chips" id="tag-chips"></div>
+      </div>
+      <div class="fb-row">
+        <label class="toggle-past"><input type="checkbox" id="hide-past" checked> 排除過期</label>
+        <label class="toggle-past"><input type="checkbox" id="show-seen"> 顯示已看過</label>
+        <label class="toggle-past"><input type="checkbox" id="show-low"> 顯示低相關公告<span id="low-count"></span></label>
+      </div>
+    </div>
   </div>
+
+  <!-- 自上次造訪以來新增 -->
+  <button type="button" id="visit-banner" class="visit-banner" hidden></button>
 
   <!-- List view -->
   <div id="view-list">
@@ -452,9 +589,9 @@ footer a { color: var(--teal); text-decoration: none; }
   <!-- Calendar view -->
   <div id="view-calendar">
     <div class="cal-header">
-      <button class="cal-nav" onclick="calMove(-1)">‹</button>
+      <button class="cal-nav" id="cal-prev" aria-label="上個月">‹</button>
       <h2 id="cal-title"></h2>
-      <button class="cal-nav" onclick="calMove(1)">›</button>
+      <button class="cal-nav" id="cal-next" aria-label="下個月">›</button>
     </div>
     <div class="cal-grid">
       <div class="cal-weekdays">
@@ -471,26 +608,64 @@ footer a { color: var(--teal); text-decoration: none; }
 
 <footer>
   資料自動彙整自各學會的公開公告頁，僅顯示標題與連結並導回原站，非官方彙整，實際資訊以原公告為準。<br>
+  推薦分數與主題標籤由標題關鍵字自動評分，僅供排序參考；收藏／已看只存在這台裝置的瀏覽器。<br>
   來源：TSA・疼痛醫學會・RAPM・TSCVA・TWERAS・TSCCM
 </footer>
 
 <script>
+// ── 儲存（localStorage；無後端，換裝置不同步）────────────────
+// 評分 / NEW / 已看 / 上次造訪 的做法移植自 pulm-radar（drpwchen/paper-radar, MIT）
+const LS_ACT   = 'ar_actions_v1';   // { id: {star, seen} }
+const LS_FILT  = 'ar_filters_v1';   // 篩選狀態
+const LS_VISIT = 'ar_visit_v1';     // { prev, last }
+
+function load(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } }
+function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* 無痕模式等 */ } }
+
 // ── State ────────────────────────────────────────────────────
 let ALL_EVENTS = [];
-let activeSources = new Set();
-let activeCats    = new Set();
+let NEW_DAYS = 7;
+let actions = load(LS_ACT, {});
+let filt = Object.assign({
+  q: '', sort: 'date', view: 'all',
+  hidePast: true, showSeen: false, showLow: false,
+  sources: [], cats: [], tags: [],
+  collapsed: null,            // null = 依螢幕寬度決定
+}, load(LS_FILT, {}));
+const seenAtLoad = new Set();   // 開頁前就標已看的才隱藏；這次才點的先留著（變淡）
 let calYear, calMonth;
 const today = new Date();
 today.setHours(0,0,0,0);
 
+// ── 日期工具（一律用本地時間，避免 toISOString 的 UTC 位移）──
+function ymd(d) {
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function parseYmd(s) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || '');
+  return m ? new Date(+m[1], +m[2]-1, +m[3]) : null;
+}
+function dayDiff(a, b) { return Math.round((a - b) / 86400000); }
+const TODAY_STR = ymd(today);
+
+// 回訪：跨「日」才滾動 prev
+function resolveVisit() {
+  let v = load(LS_VISIT, null);
+  if (!v) v = { prev: null, last: TODAY_STR };
+  else if (v.last !== TODAY_STR) v = { prev: v.last, last: TODAY_STR };
+  save(LS_VISIT, v);
+  return v;
+}
+const visit = resolveVisit();
+
 // ── Boot ─────────────────────────────────────────────────────
 async function boot() {
-  const r = await fetch('data/events.json').catch(() => null);
+  const r = await fetch('data/events.json', { cache: 'no-cache' }).catch(() => null);
   if (!r || !r.ok) { showError(); return; }
   const data = await r.json();
-  ALL_EVENTS = data.events || [];
+  NEW_DAYS = data.new_days ?? 7;
+  ALL_EVENTS = (data.events || []).map(normalizeEvent);
 
-  // Updated-at
   if (data.generated_at) {
     const d = new Date(data.generated_at);
     document.getElementById('updated-at').textContent =
@@ -498,10 +673,34 @@ async function boot() {
                                    hour:'2-digit', minute:'2-digit' });
   }
 
+  for (const [id, a] of Object.entries(actions)) if (a && a.seen) seenAtLoad.add(id);
+  pruneStaleFilters();
+  bindControls();
   buildChips();
   calYear  = today.getFullYear();
   calMonth = today.getMonth();
   render();
+}
+
+// 舊格式（沒有 id / score / tags）的 events.json 也要能顯示
+function normalizeEvent(e) {
+  const d = parseYmd(e.date);
+  const first = parseYmd(e.first_seen);
+  const tags = Array.isArray(e.tags) ? e.tags : [];
+  return Object.assign({}, e, {
+    id: e.id || hashId(`${e.source}|${e.title}|${e.date}`),
+    _date: d,
+    _isNew: !!first && dayDiff(today, first) >= 0 && dayDiff(today, first) <= NEW_DAYS,
+    _topics: tags.filter(t => !/^(neg|bonus):/.test(t)),
+    _warns:  tags.filter(t => t.startsWith('neg:')).map(t => t.slice(4)),
+    tier: e.tier || 'candidate',
+    _search: [e.title, e.source, e.category, ...tags].join(' ').toLowerCase(),
+  });
+}
+function hashId(s) {
+  let h = 5381;
+  for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0;
+  return 'x' + h.toString(36);
 }
 
 function showError() {
@@ -512,59 +711,191 @@ function showError() {
      </div>`;
 }
 
-// ── Chips ────────────────────────────────────────────────────
-function buildChips() {
-  const sources = [...new Set(ALL_EVENTS.map(e => e.source))].sort();
-  const cats    = [...new Set(ALL_EVENTS.map(e => e.category))].sort();
-
-  renderChips('source-chips', sources, activeSources);
-  renderChips('cat-chips',    cats,    activeCats);
+// 上次存的篩選值若已不存在（來源改名等），丟掉，免得篩到空白卻看不到是哪顆 chip
+function pruneStaleFilters() {
+  const values = pick => new Set(ALL_EVENTS.flatMap(pick));
+  const src = values(e => [e.source]), cat = values(e => [e.category]), tag = values(e => e._topics);
+  filt.sources = filt.sources.filter(x => src.has(x));
+  filt.cats    = filt.cats.filter(x => cat.has(x));
+  filt.tags    = filt.tags.filter(x => tag.has(x));
+  if (!['date','rec','new'].includes(filt.sort)) filt.sort = 'date';
+  if (!['all','rec','new','star','visit'].includes(filt.view)) filt.view = 'all';
+  if (filt.view === 'visit' && !visit.prev) filt.view = 'all';
 }
 
-function renderChips(containerId, items, activeSet) {
+// ── Controls ─────────────────────────────────────────────────
+function bindControls() {
+  const $ = id => document.getElementById(id);
+  const commit = () => { save(LS_FILT, filt); render(); };
+
+  $('search').value = filt.q;
+  $('search').oninput = e => { filt.q = e.target.value; commit(); };
+  $('sort').value = filt.sort;
+  $('sort').onchange = e => { filt.sort = e.target.value; commit(); };
+
+  const bindCheck = (id, key) => {
+    $(id).checked = !!filt[key];
+    $(id).onchange = e => { filt[key] = e.target.checked; commit(); };
+  };
+  bindCheck('hide-past', 'hidePast');
+  bindCheck('show-seen', 'showSeen');
+  bindCheck('show-low',  'showLow');
+
+  document.querySelectorAll('#view-chips .chip').forEach(c => {
+    c.onclick = () => { filt.view = c.dataset.view; commit(); };
+  });
+
+  if (filt.collapsed === null) filt.collapsed = window.innerWidth < 600;
+  $('fb-toggle').onclick = () => { filt.collapsed = !filt.collapsed; save(LS_FILT, filt); applyCollapse(); };
+  applyCollapse();
+
+  $('visit-banner').onclick = () => { filt.view = (filt.view === 'visit') ? 'all' : 'visit'; commit(); };
+
+  document.querySelectorAll('.tab-btn').forEach(b => { b.onclick = () => switchTab(b.dataset.tab, b); });
+  $('cal-prev').onclick = () => calMove(-1);
+  $('cal-next').onclick = () => calMove(1);
+
+  // 卡片上的動作（事件委派）
+  $('event-list').addEventListener('click', onCardClick);
+  $('cal-days').addEventListener('click', e => {
+    const more = e.target.closest('.cal-more');
+    if (more) more.closest('.cal-day').classList.add('expanded');
+  });
+}
+
+function applyCollapse() {
+  const btn = document.getElementById('fb-toggle');
+  document.getElementById('fb-more').hidden = filt.collapsed;
+  btn.setAttribute('aria-expanded', String(!filt.collapsed));
+  btn.classList.toggle('on', !filt.collapsed);
+  const n = filt.sources.length + filt.cats.length + filt.tags.length;
+  btn.textContent = (filt.collapsed ? '篩選 ▸' : '篩選 ▾') + (filt.collapsed && n ? `（${n}）` : '');
+}
+
+// ── Chips ────────────────────────────────────────────────────
+function buildChips() {
+  const count = pick => {
+    const m = new Map();
+    for (const e of ALL_EVENTS) {
+      if (e.tier === 'skipped' && !filt.showLow) continue;
+      for (const k of pick(e)) m.set(k, (m.get(k) || 0) + 1);
+    }
+    return m;
+  };
+  const byName = m => [...m.keys()].sort();
+  const byFreq = m => [...m.keys()].sort((a, b) => m.get(b) - m.get(a) || a.localeCompare(b));
+
+  const src = count(e => [e.source]), cat = count(e => [e.category]), tag = count(e => e._topics);
+  renderChips('source-chips', byName(src), src, filt.sources);
+  renderChips('cat-chips',    byName(cat), cat, filt.cats);
+  renderChips('tag-chips',    byFreq(tag), tag, filt.tags);
+  document.getElementById('tag-row').hidden = tag.size === 0 && filt.tags.length === 0;
+}
+
+function renderChips(containerId, items, counts, active) {
   const el = document.getElementById(containerId);
   el.innerHTML = '';
+  for (const a of active) if (!items.includes(a)) items.push(a);   // 已選但目前 0 筆的也要看得到
 
-  const allBtn = document.createElement('div');
-  allBtn.className = 'chip' + (activeSet.size === 0 ? ' active' : '');
-  allBtn.textContent = '全部';
-  allBtn.onclick = () => { activeSet.clear(); buildChips(); render(); };
-  el.appendChild(allBtn);
-
-  items.forEach(item => {
-    const chip = document.createElement('div');
-    chip.className = 'chip' + (activeSet.has(item) ? ' active' : '');
-    chip.textContent = item;
-    chip.onclick = () => {
-      if (activeSet.has(item)) activeSet.delete(item);
-      else activeSet.add(item);
-      buildChips(); render();
-    };
+  const mk = (label, on, n, fn) => {
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'chip' + (on ? ' active' : '');
+    chip.setAttribute('aria-pressed', String(on));
+    chip.textContent = label;
+    if (n != null) {
+      const s = document.createElement('span');
+      s.className = 'n'; s.textContent = n;
+      chip.appendChild(s);
+    }
+    chip.onclick = () => { fn(); save(LS_FILT, filt); render(); };
     el.appendChild(chip);
-  });
+  };
+
+  mk('全部', active.length === 0, null, () => { active.length = 0; });
+  items.forEach(item => mk(item, active.includes(item), counts.get(item) || 0, () => {
+    const i = active.indexOf(item);
+    if (i >= 0) active.splice(i, 1); else active.push(item);
+  }));
 }
 
 // ── Filter ───────────────────────────────────────────────────
+const act = e => actions[e.id] || {};
+
+// 「隱藏原因」分開算，才能在計數列告訴使用者少掉的去哪了
+function baseFilter(e) {
+  if (filt.sources.length && !filt.sources.includes(e.source)) return false;
+  if (filt.cats.length    && !filt.cats.includes(e.category))  return false;
+  if (filt.tags.length    && !filt.tags.some(t => e._topics.includes(t))) return false;
+  if (filt.hidePast && e._date && e._date < today) return false;
+  const q = filt.q.trim().toLowerCase();
+  if (q && !q.split(/\s+/).every(w => e._search.includes(w))) return false;
+  switch (filt.view) {
+    case 'rec':   return e.tier === 'recommended';
+    case 'new':   return e._isNew;
+    case 'star':  return !!act(e).star;
+    case 'visit': return !!visit.prev && !!e.first_seen && e.first_seen >= visit.prev;
+    default:      return true;
+  }
+}
+const hiddenAsLow  = e => filt.view !== 'star' && !filt.showLow && e.tier === 'skipped';
+const hiddenAsSeen = e => filt.view !== 'star' && !filt.showSeen && act(e).seen && seenAtLoad.has(e.id);
+
 function filteredEvents() {
-  const hidePast = document.getElementById('hide-past').checked;
-  return ALL_EVENTS.filter(e => {
-    if (activeSources.size > 0 && !activeSources.has(e.source)) return false;
-    if (activeCats.size    > 0 && !activeCats.has(e.category))  return false;
-    if (hidePast && e.date) {
-      const d = new Date(e.date); d.setHours(0,0,0,0);
-      if (d < today) return false;
-    }
-    return true;
-  });
+  const base = ALL_EVENTS.filter(baseFilter);
+  const shown = base.filter(e => !hiddenAsLow(e) && !hiddenAsSeen(e));
+  shown.sort(cmpFor(filt.sort));
+  return {
+    shown,
+    nLow:  base.filter(hiddenAsLow).length,
+    nSeen: base.filter(e => !hiddenAsLow(e) && hiddenAsSeen(e)).length,
+  };
+}
+
+function cmpFor(sort) {
+  const dateKey = e => e.date || '9999-99-99';              // 日期未定排最後
+  const byDate  = (a, b) => dateKey(a).localeCompare(dateKey(b));
+  const byScore = (a, b) => (b.score ?? 0) - (a.score ?? 0);
+  if (sort === 'rec') return (a, b) => byScore(a, b) || byDate(a, b);
+  if (sort === 'new') return (a, b) => (b.first_seen || '').localeCompare(a.first_seen || '') || byDate(a, b);
+  return (a, b) => byDate(a, b) || byScore(a, b);
 }
 
 // ── Render ───────────────────────────────────────────────────
 function render() {
-  const events = filteredEvents();
+  buildChips();
+  applyCollapse();
+  document.querySelectorAll('#view-chips .chip').forEach(c => {
+    const on = c.dataset.view === filt.view;
+    c.classList.toggle('active', on);
+    c.setAttribute('aria-pressed', String(on));
+  });
+
+  const { shown, nLow, nSeen } = filteredEvents();
+  const hidden = [nSeen ? `${nSeen} 筆已看` : '', nLow ? `${nLow} 筆低相關` : ''].filter(Boolean).join('、');
   document.getElementById('count-label').innerHTML =
-    `共 <b>${events.length}</b> 筆`;
-  renderList(events);
-  renderCalendar(events);
+    `共 <b>${shown.length}</b> 筆` + (hidden ? `（另隱藏 ${hidden}）` : '');
+  const totalLow = ALL_EVENTS.filter(e => e.tier === 'skipped').length;
+  document.getElementById('low-count').textContent = totalLow ? `（${totalLow}）` : '';
+
+  renderVisitBanner();
+  renderList(shown);
+  renderCalendar(shown);
+}
+
+function renderVisitBanner() {
+  const el = document.getElementById('visit-banner');
+  const n = visit.prev
+    ? ALL_EVENTS.filter(e => e.first_seen && e.first_seen >= visit.prev && e.tier !== 'skipped').length
+    : 0;
+  if (!n && filt.view !== 'visit') { el.hidden = true; return; }
+  const on = filt.view === 'visit';
+  el.hidden = false;
+  el.classList.toggle('on', on);
+  el.setAttribute('aria-pressed', String(on));
+  el.textContent = on
+    ? `✨ 只看上次造訪（${visit.prev}）以來新增的 ${n} 筆 — 點此恢復全部`
+    : `✨ 自上次造訪（${visit.prev}）以來新增 ${n} 筆 — 點此只看這些`;
 }
 
 // ── List View ────────────────────────────────────────────────
@@ -576,63 +907,144 @@ const MON_EN = ['Jan','Feb','Mar','Apr','May','Jun',
 function renderList(events) {
   const el = document.getElementById('event-list');
   if (!events.length) {
-    el.innerHTML = `<div class="empty"><div class="empty-icon">📭</div><p>沒有符合條件的課程</p></div>`;
+    const hint = filt.view === 'star' ? '還沒有收藏任何活動，按卡片上的「⭐ 收藏」就會出現在這裡'
+               : '沒有符合條件的課程';
+    el.innerHTML = `<div class="empty"><div class="empty-icon">📭</div><p>${hint}</p></div>`;
     return;
   }
 
+  const grouped = filt.sort === 'date';
   let html = '';
   let lastMonth = null;
 
   events.forEach(e => {
-    const d   = e.date ? new Date(e.date + 'T00:00:00') : null;
-    const mon = d ? `${d.getFullYear()}年 ${MON_ZH[d.getMonth()]}` : '日期未定';
-
-    if (mon !== lastMonth) {
-      html += `<div class="month-header">${mon}</div>`;
-      lastMonth = mon;
+    const d = e._date;
+    if (grouped) {
+      const mon = d ? `${d.getFullYear()}年 ${MON_ZH[d.getMonth()]}` : '日期未定';
+      if (mon !== lastMonth) {
+        html += `<div class="month-header">${mon}</div>`;
+        lastMonth = mon;
+      }
     }
-
-    const isPast   = d && d < today;
-    const isToday  = d && d.getTime() === today.getTime();
-    const dayNum   = d ? d.getDate()        : '—';
-    const monAbbr  = d ? MON_EN[d.getMonth()] : '';
-
-    const catClass = 'cat-' + (e.category || '').split('・')[0].split('/')[0];
-
-    html += `
-    <a class="event-card${isPast?' past':''}${isToday?' today':''}"
-       href="${e.url}" target="_blank" rel="noopener">
-      <div class="event-date">
-        <div class="day">${dayNum}</div>
-        <div class="mon">${monAbbr}</div>
-      </div>
-      <div class="event-body">
-        <div class="event-title">${escHtml(e.title)}</div>
-        <div class="event-meta">
-          <span class="badge badge-source">${escHtml(e.source)}</span>
-          <span class="badge badge-cat">${escHtml(e.category)}</span>
-        </div>
-      </div>
-      <div class="event-arrow">›</div>
-    </a>`;
+    html += cardHtml(e, !grouped);
   });
 
   el.innerHTML = html;
 }
 
+function whenText(d) {
+  const n = dayDiff(d, today);
+  if (n === 0) return ['今天', true];
+  if (n === 1) return ['明天', true];
+  if (n > 1)   return [`${n} 天後`, n <= 14];
+  return ['已結束', false];
+}
+
+function cardHtml(e, showYear) {
+  const d = e._date, a = act(e);
+  const isPast  = d && d < today;
+  const isToday = d && d.getTime() === today.getTime();
+  const cls = ['event-card', isPast && 'past', isToday && 'today', a.seen && 'seen',
+               a.star && 'starred', e.tier === 'skipped' && 'low'].filter(Boolean).join(' ');
+
+  const dateTitle = e.date_inferred ? ' title="日期由標題推定，請以原公告為準"' : '';
+  const dateHtml = `
+      <div class="event-date${e.date_inferred ? ' inferred' : ''}"${dateTitle}>
+        <div class="day">${d ? d.getDate() : '—'}</div>
+        <div class="mon">${d ? MON_EN[d.getMonth()] : ''}</div>
+        ${d && showYear ? `<div class="yr">${d.getFullYear()}</div>` : ''}
+      </div>`;
+
+  const url = safeUrl(e.url);
+  const titleHtml = url
+    ? `<a class="event-title" href="${escHtml(url)}" target="_blank" rel="noopener">${escHtml(e.title)}</a>`
+    : `<div class="event-title">${escHtml(e.title)}</div>`;
+
+  let meta = `<span class="badge badge-source">${escHtml(e.source)}</span>
+          <span class="badge badge-cat">${escHtml(e.category)}</span>`;
+  if (e._isNew) meta += `<span class="badge badge-new">✨ NEW</span>`;
+  for (const t of e._topics.slice(0, 4)) meta += `<span class="badge badge-tag">${escHtml(t)}</span>`;
+  for (const w of e._warns)              meta += `<span class="badge badge-warn">⚠ ${escHtml(w)}</span>`;
+  if (d) {
+    const [txt, soon] = whenText(d);
+    meta += `<span class="event-when${soon ? ' soon' : ''}">${txt}</span>`;
+  }
+
+  let acts = `<button type="button" class="act star${a.star ? ' on' : ''}" data-act="star" aria-pressed="${!!a.star}">⭐ ${a.star ? '已收藏' : '收藏'}</button>
+          <button type="button" class="act seen${a.seen ? ' on' : ''}" data-act="seen" aria-pressed="${!!a.seen}">✅ 已看</button>`;
+  if (d && !isPast) acts += `<a class="act" href="${escHtml(gcalUrl(e))}" target="_blank" rel="noopener">📅 加入 Google 日曆</a>`;
+
+  const hasScore = typeof e.score === 'number';
+  const scoreCls = e.tier === 'recommended' ? ' hi' : e.tier === 'candidate' ? ' mid' : '';
+  const right = hasScore
+    ? `<button type="button" class="score${scoreCls}" data-act="why" aria-expanded="false" title="推薦分數（點一下看怎麼算的）">${e.score}</button>`
+    : `<div class="event-arrow">›</div>`;
+
+  return `
+    <div class="${cls}" data-id="${escHtml(e.id)}">${dateHtml}
+      <div class="event-body">
+        ${titleHtml}
+        <div class="event-meta">
+          ${meta}
+        </div>
+        <div class="event-acts">
+          ${acts}
+        </div>
+        ${hasScore ? whyHtml(e) : ''}
+      </div>
+      ${right}
+    </div>`;
+}
+
+function whyHtml(e) {
+  const rows = (Array.isArray(e.why) ? e.why : []).map(([label, v]) => {
+    const n = typeof v === 'number' ? v : 0;
+    return `<div class="why-row"><span>${escHtml(label)}</span><span class="why-n ${n >= 0 ? 'pos' : 'neg'}">${n >= 0 ? '+' : '−'}${Math.abs(n)}</span></div>`;
+  }).join('') || `<div class="why-row"><span>標題沒有命中任何關鍵字</span></div>`;
+  return `<div class="why" hidden>${rows}<div class="why-row why-total"><span>推薦分數</span><span class="why-n">${e.score}</span></div></div>`;
+}
+
+function onCardClick(ev) {
+  const btn = ev.target.closest('[data-act]');
+  if (!btn) return;
+  const card = btn.closest('.event-card');
+  const id = card.dataset.id;
+  const kind = btn.dataset.act;
+
+  if (kind === 'why') {
+    const panel = card.querySelector('.why');
+    panel.hidden = !panel.hidden;
+    btn.setAttribute('aria-expanded', String(!panel.hidden));
+    return;
+  }
+  const a = actions[id] || (actions[id] = {});
+  a[kind] = !a[kind];
+  if (!a.star && !a.seen) delete actions[id];
+  save(LS_ACT, actions);
+  render();
+}
+
+function gcalUrl(e) {
+  const d = e._date, next = new Date(d); next.setDate(d.getDate() + 1);
+  const compact = x => ymd(x).replace(/-/g, '');
+  const p = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: e.title,
+    dates: `${compact(d)}/${compact(next)}`,
+    details: `${e.source}｜${e.category}\n${safeUrl(e.url)}\n（來自 麻醉科進修雷達，實際時間地點請以原公告為準）`,
+  });
+  return 'https://calendar.google.com/calendar/render?' + p.toString();
+}
+
 // ── Calendar View ─────────────────────────────────────────────
 function renderCalendar(events) {
   const y = calYear, m = calMonth;
-  const title = `${y} 年 ${MON_ZH[m]}`;
-  document.getElementById('cal-title').textContent = title;
+  document.getElementById('cal-title').textContent = `${y} 年 ${MON_ZH[m]}`;
 
   // Build event map: date string → events[]
   const map = {};
   events.forEach(e => {
-    if (e.date) {
-      if (!map[e.date]) map[e.date] = [];
-      map[e.date].push(e);
-    }
+    if (e.date) (map[e.date] = map[e.date] || []).push(e);
   });
 
   const firstDay = new Date(y, m, 1).getDay(); // 0=Sun
@@ -644,30 +1056,33 @@ function renderCalendar(events) {
 
   // Prev month padding
   for (let i = firstDay - 1; i >= 0; i--) {
-    const d = daysInPrev - i;
-    html += `<div class="cal-day other-month"><div class="cal-day-num">${d}</div></div>`;
+    html += `<div class="cal-day other-month"><div class="cal-day-num">${daysInPrev - i}</div></div>`;
     cellCount++;
   }
 
   // Current month
   for (let d = 1; d <= daysInMonth; d++) {
     const dateStr = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-    const dayEvents = map[dateStr] || [];
-    const isToday   = dateStr === todayStr();
-    const hasCls    = dayEvents.length ? ' has-events' : '';
+    const dayEvents = (map[dateStr] || []).slice()
+      .sort((a, b) => (!!act(b).star - !!act(a).star) || ((b.score ?? 0) - (a.score ?? 0)));
+    const isToday   = dateStr === TODAY_STR;
 
-    html += `<div class="cal-day${isToday?' today':''}${hasCls}">`;
+    html += `<div class="cal-day${isToday?' today':''}${dayEvents.length ? ' has-events' : ''}">`;
     html += `<div class="cal-day-num">${d}</div>`;
     html += `<div class="cal-events">`;
 
-    const show = dayEvents.slice(0, 2);
-    show.forEach(e => {
-      const catKey = 'cat-' + (e.category||'').split('・')[0].split('/')[0];
-      html += `<a class="cal-event ${catKey}" href="${e.url}" target="_blank"
-                  rel="noopener" title="${escHtml(e.title)}">${escHtml(e.title)}</a>`;
+    dayEvents.forEach((e, i) => {
+      const star = !!act(e).star;
+      const cls = ['cal-event', star ? 'star' : e.tier === 'candidate' ? 'cand' : e.tier === 'skipped' ? 'low' : '',
+                   i >= 2 ? 'extra' : ''].filter(Boolean).join(' ');
+      const label = (star ? '★ ' : '') + e.title;
+      const url = safeUrl(e.url);
+      html += url
+        ? `<a class="${cls}" href="${escHtml(url)}" target="_blank" rel="noopener" title="${escHtml(e.title)}">${escHtml(label)}</a>`
+        : `<span class="${cls}" title="${escHtml(e.title)}">${escHtml(label)}</span>`;
     });
     if (dayEvents.length > 2) {
-      html += `<div class="cal-more">+${dayEvents.length - 2} 更多</div>`;
+      html += `<button type="button" class="cal-more">+${dayEvents.length - 2} 更多</button>`;
     }
 
     html += `</div></div>`;
@@ -689,7 +1104,7 @@ function calMove(dir) {
   calMonth += dir;
   if (calMonth > 11) { calMonth = 0;  calYear++; }
   if (calMonth < 0)  { calMonth = 11; calYear--; }
-  renderCalendar(filteredEvents());
+  renderCalendar(filteredEvents().shown);
 }
 
 // ── Tab switch ───────────────────────────────────────────────
@@ -702,11 +1117,12 @@ function switchTab(tab, btn) {
 
 // ── Utils ────────────────────────────────────────────────────
 function escHtml(s) {
-  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;')
-                .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;')
+                        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-function todayStr() {
-  return today.toISOString().slice(0,10);
+// 只放行 http(s) 連結（爬到的 href 可能是 javascript: 分頁連結）
+function safeUrl(u) {
+  return /^https?:\/\//i.test(u || '') ? u : '';
 }
 
 // ── Go ───────────────────────────────────────────────────────

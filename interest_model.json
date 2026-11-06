@@ -1,0 +1,125 @@
+{
+  "version": "1.0-anesth-events",
+  "updated": "2026-11-06",
+  "_note": "麻醉科進修雷達的活動興趣模型（schema 沿用 pulm-radar / paper-radar 的 interest_model.json）。只比對活動標題。weight 3 = 最想看（單一命中即進推薦）；2 = 強興趣；1 = 一般相關。分數 >= recommend → 推薦；>= candidate → 一般；其餘 → 低相關（網站預設隱藏）。改完跑 python run.py --rescore 即可重算，不必重爬。",
+  "thresholds": {
+    "recommend": 3,
+    "candidate": 1
+  },
+  "positive": [
+    {
+      "weight": 3,
+      "tag": "工作坊 / 實作",
+      "keywords": ["工作坊", "workshop", "實作", "hands-on", "masterclass", "模擬", "大體", "cadaver"]
+    },
+    {
+      "weight": 3,
+      "tag": "年會 / 研討會",
+      "keywords": ["年會", "研討會", "學術演講會", "大會", "論壇", "symposium", "congress", "conference", "annual meeting"]
+    },
+    {
+      "weight": 3,
+      "tag": "區域麻醉 / 神經阻斷",
+      "keywords": ["區域麻醉", "神經阻斷", "區域止痛", "nerve block", "regional an", "NYSORA", "ONSORA", "ESRA", "RA Asia"]
+    },
+    {
+      "weight": 3,
+      "tag": "氣道處理",
+      "keywords": ["呼吸道", "氣道", "插管", "氣管內管", "airway"]
+    },
+    {
+      "weight": 2,
+      "tag": "月會",
+      "keywords": ["月會", "聯合討論會"]
+    },
+    {
+      "weight": 2,
+      "tag": "超音波 / POCUS",
+      "keywords": ["超音波", "ultrasound", "sonograph", "POCUS", "USMSIT", "NMUSIT"]
+    },
+    {
+      "weight": 2,
+      "tag": "疼痛",
+      "keywords": ["疼痛", "止痛", "痠痛", "神經調控", "pain", "VIPS", "SCS"]
+    },
+    {
+      "weight": 2,
+      "tag": "心胸麻醉 / TEE",
+      "keywords": ["心臟麻醉", "心胸麻", "心臟手術", "心臟超音波", "經食道", "血流動力", "血液動力", "cardiac", "TEE", "TSCVA"]
+    },
+    {
+      "weight": 2,
+      "tag": "重症 / 急救",
+      "keywords": ["重症", "加護", "敗血", "急救", "創傷", "critical care", "resuscitation", "trauma", "ICU", "ECMO", "ACLS"]
+    },
+    {
+      "weight": 2,
+      "tag": "ERAS / 周術期",
+      "keywords": ["術後加速康復", "周術期", "週術期", "圍術期", "perioperative", "peri-operative", "ERAS"]
+    },
+    {
+      "weight": 2,
+      "tag": "鎮靜 / 靜脈麻醉",
+      "keywords": ["鎮靜", "靜脈麻醉", "sedation", "propofol", "TIVA", "TSIVA", "WorldSIVA"]
+    },
+    {
+      "weight": 2,
+      "tag": "產科 / 小兒",
+      "keywords": ["產科", "無痛分娩", "小兒", "兒童", "obstetric", "paediatric", "pediatric"]
+    },
+    {
+      "weight": 1,
+      "tag": "專科甄審 / 考試",
+      "keywords": ["甄審", "甄試", "專科醫師考試", "筆試", "口試"]
+    },
+    {
+      "weight": 1,
+      "tag": "線上",
+      "keywords": ["線上", "視訊", "影音", "webinar", "Zoom"]
+    },
+    {
+      "weight": 1,
+      "tag": "AI / 研究方法",
+      "keywords": ["人工智慧", "資料庫", "臨床研究", "研究誠信", "AI", "GAI"]
+    },
+    {
+      "weight": 1,
+      "tag": "課程 / 繼續教育",
+      "keywords": ["課程", "繼續教育", "積分", "訓練"]
+    }
+  ],
+  "negative": [
+    {
+      "weight": -4,
+      "tag": "名單 / 人事公告",
+      "keywords": ["名單", "得獎", "獲獎", "恭賀", "當選", "選舉", "停權", "處分"]
+    },
+    {
+      "weight": -4,
+      "tag": "取消 / 停辦",
+      "keywords": ["取消", "停辦", "暫緩辦理"]
+    },
+    {
+      "weight": -2,
+      "tag": "報名截止 / 額滿",
+      "keywords": ["截止報名", "報名截止", "額滿"]
+    },
+    {
+      "weight": -10,
+      "tag": "非活動訊息",
+      "keywords": ["http://", "https://", "facebook.com", "索取上線連結"]
+    }
+  ],
+  "negative_exceptions": {
+    "名單 / 人事公告": ["報名名單", "錄取名單"],
+    "報名截止 / 額滿": ["延長"]
+  },
+  "bonus": {
+    "開放報名": 1,
+    "報名優惠": 1,
+    "早鳥": 1
+  },
+  "dated_bonus": 1,
+  "stale_year_penalty": -10,
+  "stale_posted_days": 180
+}
