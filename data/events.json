@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-19T02:08:08.230911Z",
-  "total": 76,
+  "generated_at": "2026-11-19T10:55:27.256559Z",
+  "total": 82,
   "sources": {
     "TSA": 60,
     "PAIN": 15,
@@ -16,43 +16,18 @@
     "candidate": 1
   },
   "tiers": {
-    "recommended": 28,
-    "candidate": 6,
+    "recommended": 32,
+    "candidate": 8,
     "skipped": 42
   },
   "events": [
-    {
-      "title": "~ 115/11/15 麻醉活動 2026台灣醫學週─台灣聯合醫學會學術演講會暨臺灣醫學會第119屆總會學術演講會",
-      "date": "2026-11-12",
-      "source": "TSA",
-      "category": "學術活動",
-      "url": "https://www.anesth.org.tw/events/content.asp?ID=3128&EduType=5",
-      "scraped_at": "2026-11-19T02:07:21Z",
-      "score": 4,
-      "tags": [
-        "年會 / 研討會"
-      ],
-      "why": [
-        [
-          "年會 / 研討會",
-          3
-        ],
-        [
-          "有明確活動日期",
-          1
-        ]
-      ],
-      "tier": "recommended",
-      "id": "7617ee551a6c",
-      "first_seen": ""
-    },
     {
       "title": "115年11月雲嘉區麻醉月會(台大醫院雲林分院麻醉部/台灣麻醉醫學會)",
       "date": "2026-11-21",
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3145&EduType=2",
-      "scraped_at": "2026-11-19T02:07:21Z",
+      "scraped_at": "2026-11-19T10:54:41Z",
       "score": 3,
       "tags": [
         "月會"
@@ -72,12 +47,37 @@
       "first_seen": ""
     },
     {
+      "title": "115年11月北區麻醉月會( 佛教慈濟醫療財團法人台北慈濟醫院、台灣麻醉醫學會)",
+      "date": "2026-11-21",
+      "source": "TSA",
+      "category": "學術活動",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=3150&EduType=2",
+      "scraped_at": "2026-11-19T10:54:41Z",
+      "score": 3,
+      "tags": [
+        "月會"
+      ],
+      "why": [
+        [
+          "月會",
+          2
+        ],
+        [
+          "有明確活動日期",
+          1
+        ]
+      ],
+      "tier": "recommended",
+      "id": "5823290461ef",
+      "first_seen": "2026-11-19"
+    },
+    {
       "title": "115年11月南區麻醉月會(義大醫院/台灣麻醉醫學會)",
       "date": "2026-11-21",
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3144&EduType=2",
-      "scraped_at": "2026-11-19T02:07:21Z",
+      "scraped_at": "2026-11-19T10:54:41Z",
       "score": 3,
       "tags": [
         "月會"
@@ -97,42 +97,12 @@
       "first_seen": ""
     },
     {
-      "title": "神經阻斷術工作坊",
-      "date": "2026-11-21",
-      "source": "TSA",
-      "category": "學術活動",
-      "url": "https://www.anesth.org.tw/events/content.asp?ID=3143&EduType=5",
-      "scraped_at": "2026-11-19T02:07:21Z",
-      "score": 7,
-      "tags": [
-        "工作坊 / 實作",
-        "區域麻醉 / 神經阻斷"
-      ],
-      "why": [
-        [
-          "工作坊 / 實作",
-          3
-        ],
-        [
-          "區域麻醉 / 神經阻斷",
-          3
-        ],
-        [
-          "有明確活動日期",
-          1
-        ]
-      ],
-      "tier": "recommended",
-      "id": "a1fbba92cf04",
-      "first_seen": ""
-    },
-    {
       "title": "115年11月南區麻醉月會",
       "date": "2026-11-21",
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 3,
       "tags": [
         "月會"
@@ -157,7 +127,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3146&EduType=2",
-      "scraped_at": "2026-11-19T02:07:21Z",
+      "scraped_at": "2026-11-19T10:54:41Z",
       "score": 3,
       "tags": [
         "月會"
@@ -182,7 +152,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 6,
       "tags": [
         "工作坊 / 實作",
@@ -212,7 +182,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3147&EduType=2",
-      "scraped_at": "2026-11-19T02:07:21Z",
+      "scraped_at": "2026-11-19T10:54:41Z",
       "score": 3,
       "tags": [
         "月會"
@@ -232,12 +202,66 @@
       "first_seen": ""
     },
     {
+      "title": "麻醉醫師如何幫忙減少術後譫妄",
+      "date": "2026-12-04",
+      "source": "TSA",
+      "category": "學術活動",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=3152&EduType=2",
+      "scraped_at": "2026-11-19T10:54:41Z",
+      "score": 1,
+      "tags": [],
+      "why": [
+        [
+          "有明確活動日期",
+          1
+        ]
+      ],
+      "tier": "candidate",
+      "id": "de6a809fd396",
+      "first_seen": "2026-11-19"
+    },
+    {
+      "title": "~ 115/12/06 麻醉活動 2026 台灣區域麻醉暨止痛醫學會年會 - 跨域前行：拓展區域麻醉與止痛管理新視野",
+      "date": "2026-12-04",
+      "source": "TSA",
+      "category": "學術活動",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=3153&EduType=5",
+      "scraped_at": "2026-11-19T10:54:41Z",
+      "score": 9,
+      "tags": [
+        "年會 / 研討會",
+        "區域麻醉 / 神經阻斷",
+        "疼痛"
+      ],
+      "why": [
+        [
+          "年會 / 研討會",
+          3
+        ],
+        [
+          "區域麻醉 / 神經阻斷",
+          3
+        ],
+        [
+          "疼痛",
+          2
+        ],
+        [
+          "有明確活動日期",
+          1
+        ]
+      ],
+      "tier": "recommended",
+      "id": "3740715032b4",
+      "first_seen": "2026-11-19"
+    },
+    {
       "title": "2026 台灣區域麻醉暨止痛醫學會年會 ＠December 4-6",
       "date": "2026-12-04",
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/33",
-      "scraped_at": "2026-11-19T02:07:30Z",
+      "scraped_at": "2026-11-19T10:54:49Z",
       "posted": "2026-10-02",
       "score": 9,
       "tags": [
@@ -273,7 +297,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 9,
       "tags": [
         "年會 / 研討會",
@@ -303,12 +327,42 @@
       "first_seen": ""
     },
     {
+      "title": "精進外科系醫師醫療韌性訓練計畫示範課程暨論壇(高長場)",
+      "date": "2026-12-06",
+      "source": "TSA",
+      "category": "學術活動",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=3154&EduType=5",
+      "scraped_at": "2026-11-19T10:54:41Z",
+      "score": 5,
+      "tags": [
+        "年會 / 研討會",
+        "課程 / 繼續教育"
+      ],
+      "why": [
+        [
+          "年會 / 研討會",
+          3
+        ],
+        [
+          "課程 / 繼續教育",
+          1
+        ],
+        [
+          "有明確活動日期",
+          1
+        ]
+      ],
+      "tier": "recommended",
+      "id": "794fd4923794",
+      "first_seen": "2026-11-19"
+    },
+    {
       "title": "Advanced Regional Anesthesia Masterclass: The ONSORA Experience",
       "date": "2026-12-06",
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 7,
       "tags": [
         "工作坊 / 實作",
@@ -338,7 +392,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/other-academic-activities/441-115-12-13-115.html",
-      "scraped_at": "2026-11-19T02:08:03Z",
+      "scraped_at": "2026-11-19T10:55:22Z",
       "date_inferred": true,
       "score": 4,
       "tags": [
@@ -359,12 +413,31 @@
       "first_seen": "2026-11-18"
     },
     {
+      "title": "NIRS (近紅外光譜儀) 的使用建議",
+      "date": "2026-12-15",
+      "source": "TSA",
+      "category": "學術活動",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=3155&EduType=5",
+      "scraped_at": "2026-11-19T10:54:41Z",
+      "score": 1,
+      "tags": [],
+      "why": [
+        [
+          "有明確活動日期",
+          1
+        ]
+      ],
+      "tier": "candidate",
+      "id": "3aeb10225341",
+      "first_seen": "2026-11-19"
+    },
+    {
       "title": "麻醉醫學會115年12月北區月會",
       "date": "2026-12-19",
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3148&EduType=2",
-      "scraped_at": "2026-11-19T02:07:21Z",
+      "scraped_at": "2026-11-19T10:54:41Z",
       "score": 3,
       "tags": [
         "月會"
@@ -384,12 +457,12 @@
       "first_seen": ""
     },
     {
-      "title": "2026年台灣麻醉醫學會12月南區聯合討論會",
+      "title": "台灣麻醉醫學會 雲嘉區聯合討論會",
       "date": "2026-12-19",
-      "source": "疼痛醫學會",
+      "source": "TSA",
       "category": "學術活動",
-      "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=3159&EduType=2",
+      "scraped_at": "2026-11-19T10:54:41Z",
       "score": 3,
       "tags": [
         "月會"
@@ -405,8 +478,88 @@
         ]
       ],
       "tier": "recommended",
-      "id": "cc9bcc857a9c",
-      "first_seen": "2026-11-10"
+      "id": "7a967bfa46fa",
+      "first_seen": "2026-11-19"
+    },
+    {
+      "title": "2026年台灣麻醉醫學會12月南區聯合討論會",
+      "date": "2026-12-19",
+      "source": "TSA",
+      "category": "學術活動",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=3157&EduType=2",
+      "scraped_at": "2026-11-19T10:54:41Z",
+      "score": 3,
+      "tags": [
+        "月會"
+      ],
+      "why": [
+        [
+          "月會",
+          2
+        ],
+        [
+          "有明確活動日期",
+          1
+        ]
+      ],
+      "tier": "recommended",
+      "id": "9fadfc3a9f61",
+      "first_seen": "2026-11-19"
+    },
+    {
+      "title": "中區疼痛季會",
+      "date": "2026-12-19",
+      "source": "TSA",
+      "category": "學術活動",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=3158&EduType=5",
+      "scraped_at": "2026-11-19T10:54:41Z",
+      "score": 3,
+      "tags": [
+        "疼痛"
+      ],
+      "why": [
+        [
+          "疼痛",
+          2
+        ],
+        [
+          "有明確活動日期",
+          1
+        ]
+      ],
+      "tier": "recommended",
+      "id": "f5b1fc47717a",
+      "first_seen": "2026-11-19"
+    },
+    {
+      "title": "精進外科系醫師醫療韌性訓練計畫示範課程暨論壇(花慈場)",
+      "date": "2026-12-19",
+      "source": "TSA",
+      "category": "學術活動",
+      "url": "https://www.anesth.org.tw/events/content.asp?ID=3156&EduType=5",
+      "scraped_at": "2026-11-19T10:54:41Z",
+      "score": 5,
+      "tags": [
+        "年會 / 研討會",
+        "課程 / 繼續教育"
+      ],
+      "why": [
+        [
+          "年會 / 研討會",
+          3
+        ],
+        [
+          "課程 / 繼續教育",
+          1
+        ],
+        [
+          "有明確活動日期",
+          1
+        ]
+      ],
+      "tier": "recommended",
+      "id": "fef6430d13ce",
+      "first_seen": "2026-11-19"
     },
     {
       "title": "華碩手持無線超音波MSK骨復健系列之5 + 超音波輔助之診斷與治療 (頸椎與腰椎)",
@@ -414,7 +567,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 3,
       "tags": [
         "超音波 / POCUS"
@@ -439,7 +592,7 @@
       "source": "TSA",
       "category": "學術活動",
       "url": "https://www.anesth.org.tw/events/content.asp?ID=3149&EduType=5",
-      "scraped_at": "2026-11-19T02:07:21Z",
+      "scraped_at": "2026-11-19T10:54:41Z",
       "score": 6,
       "tags": [
         "年會 / 研討會",
@@ -469,7 +622,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 6,
       "tags": [
         "年會 / 研討會",
@@ -499,7 +652,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 4,
       "tags": [
         "超音波 / POCUS",
@@ -529,7 +682,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 7,
       "tags": [
         "工作坊 / 實作",
@@ -564,7 +717,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 4,
       "tags": [
         "超音波 / POCUS",
@@ -594,7 +747,7 @@
       "source": "疼痛醫學會",
       "category": "學術活動",
       "url": "https://pain.org.tw/index.php/news_page/news_page2_content",
-      "scraped_at": "2026-11-19T02:07:28Z",
+      "scraped_at": "2026-11-19T10:54:47Z",
       "score": 4,
       "tags": [
         "超音波 / POCUS",
@@ -624,7 +777,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/other-academic-activities/428-116-06-28-2026-eras.html",
-      "scraped_at": "2026-11-19T02:08:03Z",
+      "scraped_at": "2026-11-19T10:55:22Z",
       "date_inferred": true,
       "score": 6,
       "tags": [
@@ -655,7 +808,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2323",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": -4,
       "tags": [
         "neg:名單 / 人事公告"
@@ -676,7 +829,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2326",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": 2,
       "tags": [
         "鎮靜 / 靜脈麻醉"
@@ -697,7 +850,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2322",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": 1,
       "tags": [
         "專科甄審 / 考試"
@@ -718,7 +871,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2319",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": -4,
       "tags": [
         "neg:名單 / 人事公告"
@@ -739,7 +892,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2294",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": -1,
       "tags": [
         "鎮靜 / 靜脈麻醉",
@@ -770,7 +923,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2318",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": 1,
       "tags": [
         "線上"
@@ -791,7 +944,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2317",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": 1,
       "tags": [
         "專科甄審 / 考試"
@@ -812,7 +965,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2316",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": -1,
       "tags": [
         "鎮靜 / 靜脈麻醉",
@@ -843,7 +996,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2314",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": -4,
       "tags": [
         "neg:名單 / 人事公告"
@@ -864,7 +1017,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2278",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": -3,
       "tags": [
         "課程 / 繼續教育",
@@ -890,7 +1043,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2311",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": -1,
       "tags": [
         "鎮靜 / 靜脈麻醉",
@@ -921,7 +1074,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2306",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": -1,
       "tags": [
         "鎮靜 / 靜脈麻醉",
@@ -952,7 +1105,7 @@
       "source": "TSA",
       "category": "學會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=1&id=2286",
-      "scraped_at": "2026-11-19T02:07:23Z",
+      "scraped_at": "2026-11-19T10:54:42Z",
       "score": -1,
       "tags": [
         "鎮靜 / 靜脈麻醉",
@@ -983,7 +1136,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=2264",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": 2,
       "tags": [
         "月會"
@@ -1004,7 +1157,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=2154",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1030,7 +1183,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=2060",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1056,7 +1209,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=1954",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1082,7 +1235,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=876",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1108,7 +1261,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=764",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1134,7 +1287,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=679",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -2,
       "tags": [
         "月會",
@@ -1160,7 +1313,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=669",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1186,7 +1339,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=560",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1212,7 +1365,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=453",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1238,7 +1391,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=343",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": 2,
       "tags": [
         "月會"
@@ -1259,7 +1412,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=333",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1285,7 +1438,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=189",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1311,7 +1464,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=97",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1337,7 +1490,7 @@
       "source": "TSA",
       "category": "月會資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=4&id=11",
-      "scraped_at": "2026-11-19T02:07:24Z",
+      "scraped_at": "2026-11-19T10:54:44Z",
       "score": -8,
       "tags": [
         "月會",
@@ -1363,7 +1516,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2288",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": 5,
       "tags": [
         "年會 / 研討會",
@@ -1389,7 +1542,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2250",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": -9,
       "tags": [
         "AI / 研究方法",
@@ -1415,7 +1568,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2245",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": 4,
       "tags": [
         "工作坊 / 實作",
@@ -1441,7 +1594,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2236",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": -6,
       "tags": [
         "區域麻醉 / 神經阻斷",
@@ -1472,7 +1625,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2211",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": -7,
       "tags": [
         "重症 / 急救",
@@ -1503,7 +1656,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2197",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": -5,
       "tags": [
         "重症 / 急救",
@@ -1544,7 +1697,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2177",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": 6,
       "tags": [
         "工作坊 / 實作",
@@ -1570,7 +1723,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2172",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": 0,
       "tags": [],
       "why": [],
@@ -1584,7 +1737,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2170",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": 6,
       "tags": [
         "氣道處理",
@@ -1615,7 +1768,7 @@
       "source": "TSA",
       "category": "其他學術資訊",
       "url": "https://www.anesth.org.tw/news/content.asp?type=5&id=2169",
-      "scraped_at": "2026-11-19T02:07:25Z",
+      "scraped_at": "2026-11-19T10:54:45Z",
       "score": -10,
       "tags": [
         "neg:過期資訊"
@@ -1636,7 +1789,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2325",
-      "scraped_at": "2026-11-19T02:07:27Z",
+      "scraped_at": "2026-11-19T10:54:46Z",
       "score": -4,
       "tags": [
         "neg:名單 / 人事公告"
@@ -1657,7 +1810,7 @@
       "source": "TSA",
       "category": "年會公告",
       "url": "https://www.anesth.org.tw/news/content.asp?type=9&id=2324",
-      "scraped_at": "2026-11-19T02:07:27Z",
+      "scraped_at": "2026-11-19T10:54:46Z",
       "score": -1,
       "tags": [
         "年會 / 研討會",
@@ -1683,7 +1836,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/6",
-      "scraped_at": "2026-11-19T02:07:51Z",
+      "scraped_at": "2026-11-19T10:55:09Z",
       "posted": "2025-10-14",
       "score": -2,
       "tags": [
@@ -1720,7 +1873,7 @@
       "source": "RAPM",
       "category": "區域麻醉・疼痛介入",
       "url": "https://rapm.org.tw/news-detail/4",
-      "scraped_at": "2026-11-19T02:07:58Z",
+      "scraped_at": "2026-11-19T10:55:17Z",
       "posted": "2025-03-27",
       "score": -4,
       "tags": [
@@ -1752,7 +1905,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/academic-activities/436-2026-tscva-2.html",
-      "scraped_at": "2026-11-19T02:08:02Z",
+      "scraped_at": "2026-11-19T10:55:21Z",
       "score": -1,
       "tags": [
         "心胸麻醉 / TEE",
@@ -1783,7 +1936,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/academic-activities/434-2026-2.html",
-      "scraped_at": "2026-11-19T02:08:02Z",
+      "scraped_at": "2026-11-19T10:55:21Z",
       "score": -2,
       "tags": [
         "心胸麻醉 / TEE",
@@ -1809,7 +1962,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/academic-activities/433-2026.html",
-      "scraped_at": "2026-11-19T02:08:02Z",
+      "scraped_at": "2026-11-19T10:55:21Z",
       "score": -1,
       "tags": [
         "心胸麻醉 / TEE",
@@ -1840,7 +1993,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/academic-activities/427-2026-tscva.html",
-      "scraped_at": "2026-11-19T02:08:02Z",
+      "scraped_at": "2026-11-19T10:55:21Z",
       "score": 5,
       "tags": [
         "工作坊 / 實作",
@@ -1876,7 +2029,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.facebook.com/tscvaanes/",
-      "scraped_at": "2026-11-19T02:08:02Z",
+      "scraped_at": "2026-11-19T10:55:21Z",
       "score": -10,
       "tags": [
         "neg:非活動訊息"
@@ -1897,7 +2050,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.google.com/maps/search/%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%97%E8%B7%AF7%E8%99%9F?entry=gmail&source=g",
-      "scraped_at": "2026-11-19T02:08:03Z",
+      "scraped_at": "2026-11-19T10:55:22Z",
       "score": 0,
       "tags": [],
       "why": [],
@@ -1911,7 +2064,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "http://www.ths.org.tw/",
-      "scraped_at": "2026-11-19T02:08:03Z",
+      "scraped_at": "2026-11-19T10:55:22Z",
       "score": -10,
       "tags": [
         "neg:非活動訊息"
@@ -1932,7 +2085,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.twmailto:yiting@ths.org.tw",
-      "scraped_at": "2026-11-19T02:08:03Z",
+      "scraped_at": "2026-11-19T10:55:22Z",
       "score": 0,
       "tags": [],
       "why": [],
@@ -1946,7 +2099,7 @@
       "source": "TSCVA",
       "category": "心臟麻醉",
       "url": "https://www.tscva.org.tw/continuing-education/other-academic-activities/424-ascpalm-2026.html",
-      "scraped_at": "2026-11-19T02:08:03Z",
+      "scraped_at": "2026-11-19T10:55:22Z",
       "score": 0,
       "tags": [],
       "why": [],
@@ -1960,7 +2113,7 @@
       "source": "TWERAS",
       "category": "ERAS・周術期",
       "url": "https://tweras.org/12th-eras-world-congress-singapore/",
-      "scraped_at": "2026-11-19T02:08:03Z",
+      "scraped_at": "2026-11-19T10:55:23Z",
       "score": 5,
       "tags": [
         "年會 / 研討會",
@@ -1986,7 +2139,7 @@
       "source": "TWERAS",
       "category": "ERAS・周術期",
       "url": "https://tweras.org/2025booklet/",
-      "scraped_at": "2026-11-19T02:08:03Z",
+      "scraped_at": "2026-11-19T10:55:23Z",
       "score": -5,
       "tags": [
         "年會 / 研討會",
@@ -2017,7 +2170,7 @@
       "source": "TSCCM",
       "category": "重症・ACLS",
       "url": "https://www.tsccm.org.tw/od/Academic/index.asp?act_kindid=2",
-      "scraped_at": "2026-11-19T02:08:08Z",
+      "scraped_at": "2026-11-19T10:55:27Z",
       "score": -9,
       "tags": [
         "課程 / 繼續教育",
